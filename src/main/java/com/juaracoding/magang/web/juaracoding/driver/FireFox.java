@@ -9,7 +9,7 @@ public class FireFox implements DriverStrategy {
 	public WebDriver setStrategy() {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver",
-				"C:/Users/ACER/Desktop/JCCODING/sqa/HariSembilanBelas/chromedriver.exe");
+				"C:/Users/ACER/Desktop/JCCODING/sqa/driver/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		return driver;
 	}

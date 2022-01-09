@@ -18,6 +18,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -49,6 +50,13 @@ public class StepDefinition {
 		TestCase[] tests = TestCase.values();
 		test = report.startTest(tests[Utils.testcount].getTestNama());
 		Utils.testcount++;
+	}
+	
+	@Given("^Menampilkan form Login in ke website web juara coding")
+	public void formLogin() {
+		driver = DriverSingleton.getDriver();
+		driver.get(ConstantsDriver.URL);
+		test.log(LogStatus.PASS, "Navigation to : "+ConstantsDriver.URL);
 	}
 	
 	
