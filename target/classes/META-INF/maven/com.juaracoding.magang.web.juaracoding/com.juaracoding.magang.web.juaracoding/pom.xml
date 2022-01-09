@@ -1,0 +1,8 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.juaracoding.magang.web.juaracoding</groupId>
+  <artifactId>com.juaracoding.magang.web.juaracoding</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>project sqa test web juara coding</name>
+  <description>project sqa test web juara coding 2 minggu dimulai dari 10 januari 2022</description>
+</project>
