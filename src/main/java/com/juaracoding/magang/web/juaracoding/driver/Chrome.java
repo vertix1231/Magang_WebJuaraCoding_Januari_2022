@@ -8,7 +8,7 @@ public class Chrome implements DriverStrategy {
 
 	public WebDriver setStrategy() {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver","C:/Users/ACER/Desktop/JCCODING/sqa/driver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "D:/ChromeDriver/chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("useAutomationExtension", false);
 		options.addArguments("--no-sandbox");

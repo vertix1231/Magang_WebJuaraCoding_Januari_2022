@@ -7,6 +7,7 @@ import org.springframework.test.context.ContextConfiguration;
 
 import com.juaracoding.magang.web.juaracoding.config.AutomationFrameworkConfiguration;
 import com.juaracoding.magang.web.juaracoding.driver.DriverSingleton;
+import com.juaracoding.magang.web.juaracoding.pages.LoginPage;
 import com.juaracoding.magang.web.juaracoding.utils.ConfigurationProperties;
 import com.juaracoding.magang.web.juaracoding.utils.ConstantsDriver;
 import com.juaracoding.magang.web.juaracoding.utils.TestCase;
@@ -28,11 +29,7 @@ import io.cucumber.spring.CucumberContextConfiguration;
 @ContextConfiguration(classes = AutomationFrameworkConfiguration.class)
 public class StepDefinition {
 	private WebDriver driver;
-//	private HomePage homepage;
-//	private MyAccountPage myaccountpage;
-//	private LoginPageWP loginpagewp;
-//	private CartPage cartpage;
-//	private ShopPage shoppage;
+	LoginPage login;
 	ExtentTest test;
 	static ExtentReports report = new ExtentReports("src/main/resources/reporttest.html");
 	
@@ -42,22 +39,29 @@ public class StepDefinition {
 	@Before
 	public void initializeObject() {
 		DriverSingleton.getInstance(configuration.getBrowser());
-//		homepage = new HomePage();
-//		myaccountpage = new MyAccountPage();
-//		loginpagewp = new LoginPageWP();
-//		cartpage = new CartPage();
-//		shoppage = new ShopPage();
+		login = new LoginPage();
 		TestCase[] tests = TestCase.values();
 		test = report.startTest(tests[Utils.testcount].getTestNama());
 		Utils.testcount++;
 	}
 	
-	@Given("^Menampilkan form Login in ke website web juara coding")
+	@Given("^User enter to website Admin JuaraCoding")
 	public void formLogin() {
 		driver = DriverSingleton.getDriver();
 		driver.get(ConstantsDriver.URL);
 		test.log(LogStatus.PASS, "Navigation to : "+ConstantsDriver.URL);
 	}
 	
+	@When("^User input username and password")
+	public void User_input_username_and_password() {
+		login.loginForm(configuration.getMyusername(), configuration.getPassword());
+		test.log(LogStatus.PASS, "User input username and password");
+	}
+	
+	@Then ("^User click button Login")
+	public void User_click_button_Login() {
+		login.clickLogin();
+		test.log(LogStatus.PASS, "User click button Login");
+	}
 	
 }
