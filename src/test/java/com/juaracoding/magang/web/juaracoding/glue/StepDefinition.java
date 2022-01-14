@@ -7,6 +7,7 @@ import org.springframework.test.context.ContextConfiguration;
 
 import com.juaracoding.magang.web.juaracoding.config.AutomationFrameworkConfiguration;
 import com.juaracoding.magang.web.juaracoding.driver.DriverSingleton;
+import com.juaracoding.magang.web.juaracoding.pages.DashboardPage;
 import com.juaracoding.magang.web.juaracoding.pages.LoginPage;
 import com.juaracoding.magang.web.juaracoding.utils.ConfigurationProperties;
 import com.juaracoding.magang.web.juaracoding.utils.ConstantsDriver;
@@ -30,6 +31,7 @@ import io.cucumber.spring.CucumberContextConfiguration;
 public class StepDefinition {
 	private WebDriver driver;
 	LoginPage login;
+	DashboardPage dashboard;
 	ExtentTest test;
 	static ExtentReports report = new ExtentReports("src/main/resources/reporttest.html");
 	
@@ -40,6 +42,7 @@ public class StepDefinition {
 	public void initializeObject() {
 		DriverSingleton.getInstance(configuration.getBrowser());
 		login = new LoginPage();
+		dashboard = new DashboardPage();
 		TestCase[] tests = TestCase.values();
 		test = report.startTest(tests[Utils.testcount].getTestNama());
 		Utils.testcount++;
@@ -58,10 +61,16 @@ public class StepDefinition {
 		test.log(LogStatus.PASS, "User input username and password");
 	}
 	
-	@Then ("^User click button Login")
+	@Then("^User click button Login")
 	public void User_click_button_Login() {
 		login.clickLogin();
 		test.log(LogStatus.PASS, "User click button Login");
+	}
+	
+	@Then("^User click date")
+	public void User_click_date() {
+		dashboard.callendar();
+		test.log(LogStatus.PASS, "User click date");
 	}
 	
 }
