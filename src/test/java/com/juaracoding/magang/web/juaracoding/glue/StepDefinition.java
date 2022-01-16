@@ -1,9 +1,14 @@
 package com.juaracoding.magang.web.juaracoding.glue;
 
+import static org.junit.Assert.assertEquals;
+
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
+
 
 import com.juaracoding.magang.web.juaracoding.config.AutomationFrameworkConfiguration;
 import com.juaracoding.magang.web.juaracoding.driver.DriverSingleton;
@@ -11,6 +16,7 @@ import com.juaracoding.magang.web.juaracoding.pages.DashboardPage;
 import com.juaracoding.magang.web.juaracoding.pages.LoginPage;
 import com.juaracoding.magang.web.juaracoding.utils.ConfigurationProperties;
 import com.juaracoding.magang.web.juaracoding.utils.ConstantsDriver;
+import com.juaracoding.magang.web.juaracoding.utils.Log;
 import com.juaracoding.magang.web.juaracoding.utils.TestCase;
 import com.juaracoding.magang.web.juaracoding.utils.Utils;
 import com.relevantcodes.extentreports.ExtentReports;
@@ -32,8 +38,8 @@ public class StepDefinition {
 	private WebDriver driver;
 	LoginPage login;
 	DashboardPage dashboard;
-	ExtentTest test;
-	static ExtentReports report = new ExtentReports("src/main/resources/reporttest.html");
+	ExtentTest extentTest;
+	static ExtentReports extentReports = new ExtentReports("src/main/resources/reporttest_Magang_WebJCCODING.html");
 	
 	@Autowired
 	ConfigurationProperties configuration;
@@ -44,7 +50,9 @@ public class StepDefinition {
 		login = new LoginPage();
 		dashboard = new DashboardPage();
 		TestCase[] tests = TestCase.values();
-		test = report.startTest(tests[Utils.testcount].getTestNama());
+		extentTest = extentReports.startTest(tests[Utils.testcount].getTestNama());
+		Log.getLogData(Log.class.getName()); //log4j
+		Log.startTest(tests[Utils.testcount].getTestNama()); //log4j
 		Utils.testcount++;
 	}
 	
@@ -52,25 +60,37 @@ public class StepDefinition {
 	public void formLogin() {
 		driver = DriverSingleton.getDriver();
 		driver.get(ConstantsDriver.URL);
-		test.log(LogStatus.PASS, "Navigation to : "+ConstantsDriver.URL);
+		Log.info("INFO: Navigating to " + ConstantsDriver.URL); //log4j
+		extentTest.log(LogStatus.PASS, "Navigation to : "+ConstantsDriver.URL);
 	}
 	
 	@When("^User input username and password")
 	public void User_input_username_and_password() {
 		login.loginForm(configuration.getMyusername(), configuration.getPassword());
-		test.log(LogStatus.PASS, "User input username and password");
+		extentTest.log(LogStatus.PASS, "User input username and password");
 	}
 	
 	@Then("^User click button Login")
 	public void User_click_button_Login() {
 		login.clickLogin();
-		test.log(LogStatus.PASS, "User click button Login");
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+//		assertEquals("Good Night", dashboard.getWelcometoDashboard());// ini btw tulisannya bener2 berubah sesuai waktunya 
+//		driver.get("https://dev.ptdika.com/juaracodingv1/admin/gallery");
+		extentTest.log(LogStatus.PASS, "User click button Login");
 	}
 	
-	@Then("^User click date")
-	public void User_click_date() {
-		dashboard.callendar();
-		test.log(LogStatus.PASS, "User click date");
+	
+	@When("^click for checking side bar working or not and go to the initial dashboard page")
+	public void checkAllSidebarMenu() {
+		dashboard.checkSidebarElement();
+		
+	}
+	
+	
+	@After
+	public void closeObject() {
+		extentReports.endTest(extentTest);
+		extentReports.flush();
 	}
 	
 }
