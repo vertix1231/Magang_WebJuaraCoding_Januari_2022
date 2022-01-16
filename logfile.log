@@ -229,3 +229,6 @@
 2022-01-16 07:07:48,740 INFO  [Log] Test called: Login in project web test ke https://dev.ptdika.com/juaracodingv1/admin/login has started 
 2022-01-16 07:07:51,364 INFO  [Log] INFO: Navigating to https://dev.ptdika.com/juaracodingv1/admin/login 
 2022-01-16 07:07:54,716 INFO  [Log] Test called: Dashboard Web Juara Coding has started 
+2022-01-16 07:34:05,999 INFO  [Log] Test called: Login in project web test ke https://dev.ptdika.com/juaracodingv1/admin/login has started 
+2022-01-16 07:34:08,905 INFO  [Log] INFO: Navigating to https://dev.ptdika.com/juaracodingv1/admin/login 
+2022-01-16 07:34:10,889 INFO  [Log] Test called: Dashboard Web Juara Coding has started 
