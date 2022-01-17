@@ -7,11 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.juaracoding.magang.web.juaracoding.driver.DriverSingleton;
 
-public class LoginPage {
+public class LoginAdminPage {
 
 	private WebDriver driver;
 	
-	public LoginPage() {
+	public LoginAdminPage() {
 		driver = DriverSingleton.getDriver();
 		PageFactory.initElements(driver, this);
 	}
@@ -25,6 +25,13 @@ public class LoginPage {
 	@FindBy(css="#frmlogin > div:nth-child(3) > input")
 	private WebElement btnLogin;
 	
+	@FindBy(css="#pageWrapper > div.page-body-wrapper > div.page-body > div:nth-child(2) > div > div.col-xl-4.col-lg-12.xl-50.morning-sec.box-col-12 > div > div > div.greeting-user.text-center > div.whatsnew-btn > a")
+	private WebElement whatnew;
+	
+	public WebElement getWhatnewlogin() {
+		return whatnew;
+	}
+
 	public void loginForm(String username, String password) {
 		txtUserName.sendKeys(username);
 		txtPassword.sendKeys(password);

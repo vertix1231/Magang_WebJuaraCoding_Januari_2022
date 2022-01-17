@@ -14,11 +14,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.juaracoding.magang.web.juaracoding.driver.DriverSingleton;
 
-public class DashboardPage {
+public class DashboardAdminPage {
 
 private WebDriver driver;
 	
-	public DashboardPage() {
+	public DashboardAdminPage() {
 		driver = DriverSingleton.getDriver();
 		PageFactory.initElements(driver, this);
 	}
@@ -31,8 +31,8 @@ private WebDriver driver;
 	//TOOGLE BAR
 	@FindBy(css="#pageWrapper > div.page-body-wrapper > div.sidebar-wrapper > div > div.logo-wrapper > div.toggle-sidebar")
 	private WebElement menu_toogleeBar;
-	//DASHBOARD
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(2) > a")
+	// DASHBOARD
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(2) > a")
 	private WebElement menu_dashboard;
 	//HOME
 	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(4) > a")
@@ -115,6 +115,12 @@ private WebDriver driver;
 	public void callendar() {
 		date.click();
 	}
+	@FindBy(css="#pageWrapper > div.page-body-wrapper > div.page-body > div:nth-child(2) > div > div.col-xl-4.col-lg-12.xl-50.morning-sec.box-col-12 > div > div > div.greeting-user.text-center > div.whatsnew-btn > a")
+	private WebElement whatnew;
+	
+	public WebElement getWhatnewdashboard() {
+		return whatnew;
+	}
 	
 	public void checkSidebarElement() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -123,7 +129,6 @@ private WebDriver driver;
 		
 		//toogle
 		menu_toogleeBar.click();
-//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		menu_toogleeBar.click();
 		menu_toogleeBar.click();
 		menu_toogleeBar.click();
@@ -172,11 +177,9 @@ private WebDriver driver;
 		menu_Usersubs.click();
 		menu_User.click();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_UserAccesEmployee));
-//		js.executeScript("window.scrollBy(0,10)");
 		actions.moveToElement(menu_UserAccesEmployee).perform();
 		menu_UserAccesEmployee.click();
 //		//PROGRAM
-//		menu_User.click();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_program));
 		actions.moveToElement(menu_program).perform();
 		menu_program.click();
@@ -192,7 +195,6 @@ private WebDriver driver;
 		actions.moveToElement(menu_programboothcampharga).perform();
 		menu_programboothcampharga.click();
 //		//GALERI
-//		wait.until(ExpectedConditions.elementToBeClickable(menu_Gallery));
 		js.executeScript("window.scrollBy(0,50)");
 		wait.until(ExpectedConditions.elementToBeClickable(menu_Gallery));
 		actions.moveToElement(menu_Gallery).perform();
@@ -200,24 +202,16 @@ private WebDriver driver;
 		//Setting
 		actions.dragAndDrop(listgalery_text, menusidebar_container).build().perform();
 		menu_toogleeBar.click();
-//		menusidebar_container.click();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_Setting));
 		actions.moveToElement(menu_Setting).perform();
 		menu_Setting.click();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_Settingtemplateemail));
 		actions.moveToElement(menu_Settingtemplateemail).perform();
 		menu_Settingtemplateemail.click();
-//		js.executeScript("window.scrollBy(0,500)");
-//		menu_Setting.click();
-//		wait.until(ExpectedConditions.elementToBeClickable(menu_Settingtemplateemail));
-//		actions.moveToElement(menu_Settingtemplateemail).perform();
-//		menu_Settingtemplateemail.click();
-		//Setting
-//		js.executeScript("window.scrollBy(0,75)");
-//		actions.moveToElement(menu_Setting).perform();
-//		menu_Setting.click();
-//		actions.moveToElement(menu_Settingtemplateemail).perform();
-//		menu_Settingtemplateemail.click();
+		
+		//balik ke dashboard karna udah cek semua menu nya
+		menu_dashboard.click();
+
 		
 	}
 }

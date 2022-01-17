@@ -1,8 +1,9 @@
 package com.juaracoding.magang.web.juaracoding.utils;
 
 public enum TestCase {
-	T1("Login in project web test ke https://dev.ptdika.com/juaracodingv1/admin/login"),
-	T2("Dashboard Web Juara Coding");
+	T1("Form Sign In"),
+	T2("Dashboard Web Juara Coding"),
+	T3("Home JuaraCoding");
 	
 	
 	private String TestNama;

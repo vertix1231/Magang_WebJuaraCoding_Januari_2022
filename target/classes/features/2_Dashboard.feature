@@ -1,7 +1,7 @@
 Feature: Dashboard Web Juara Coding
 
-  Scenario: Test automation Dashboard 
-  When click for checking side bar working or not and go to the initial dashboard page
-
+  Scenario: Menampilkan halaman awal dashboard JuaraCoding dan menjalankan fungsinya
+  	When Menampilkan List tiap menu dan pengecekan kerja tiap menu di sidebar
+  	Then Berhasil pengecekan dashboard balik ke halaman dashboard
   
   	

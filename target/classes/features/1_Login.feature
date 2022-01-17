@@ -1,6 +1,6 @@
-Feature: Login in project web test ke https://dev.ptdika.com/juaracodingv1/admin/login
+Feature: Form Sign In
 
-  Scenario: Test automation Login account
-  	Given User enter to website Admin JuaraCoding
-		When User input username and password
-		Then User click button Login
+  Scenario: Menampilkan form sign in dan menjalankan fungsinya
+  	Given User masuk ke website Admin JuaraCoding
+		When User input username dan password
+		Then User klik button Login
