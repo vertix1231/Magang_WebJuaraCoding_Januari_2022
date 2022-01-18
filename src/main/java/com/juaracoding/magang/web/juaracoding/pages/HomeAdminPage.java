@@ -17,6 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.juaracoding.magang.web.juaracoding.driver.DriverSingleton;
 
 public class HomeAdminPage {
+	
 	private WebDriver driver;
 
 	public HomeAdminPage() {

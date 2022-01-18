@@ -16,130 +16,131 @@ import com.juaracoding.magang.web.juaracoding.driver.DriverSingleton;
 
 public class DashboardAdminPage {
 
-private WebDriver driver;
-	
+	private WebDriver driver;
+
 	public DashboardAdminPage() {
 		driver = DriverSingleton.getDriver();
 		PageFactory.initElements(driver, this);
 	}
-	
-	@FindBy(css ="#pageWrapper > div.page-body-wrapper > div.page-body > div:nth-child(2) > div > div.col-xl-4.col-lg-12.xl-50.calendar-sec.box-col-6 > div > div > div.default-datepicker > div > div > div > div > div.datepicker--days.datepicker--body.active > div.datepicker--cells.datepicker--cells-days > div:nth-child(18)")
+
+	@FindBy(css = "#pageWrapper > div.page-body-wrapper > div.page-body > div:nth-child(2) > div > div.col-xl-4.col-lg-12.xl-50.calendar-sec.box-col-6 > div > div > div.default-datepicker > div > div > div > div > div.datepicker--days.datepicker--body.active > div.datepicker--cells.datepicker--cells-days > div:nth-child(18)")
 	private WebElement date;
 
-	@FindBy(xpath="//*[@id=\"simple-bar\"]/div[1]/div[2]/div/div/div/li[4]")
+	@FindBy(xpath = "//*[@id=\"simple-bar\"]/div[1]/div[2]/div/div/div/li[4]")
 	private List<WebElement> logoAdminJc;
-	//TOOGLE BAR
-	@FindBy(css="#pageWrapper > div.page-body-wrapper > div.sidebar-wrapper > div > div.logo-wrapper > div.toggle-sidebar")
+	// TOOGLE BAR
+	@FindBy(css = "#pageWrapper > div.page-body-wrapper > div.sidebar-wrapper > div > div.logo-wrapper > div.toggle-sidebar")
 	private WebElement menu_toogleeBar;
 	// DASHBOARD
 	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(2) > a")
 	private WebElement menu_dashboard;
-	//HOME
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(4) > a")
+	// HOME
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(4) > a")
 	private WebElement menu_HomeJc;
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(4) > ul > li > a")
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(4) > ul > li > a")
 	private WebElement menu_HomeTestimonial;
-	//LEARNING JC
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(5)")
+	// LEARNING JC
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(5)")
 	private WebElement menu_LearningJc;
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(5) > ul > li:nth-child(1) > a")
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(5) > ul > li:nth-child(1) > a")
 	private WebElement menu_LearningLms;
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(5) > ul > li:nth-child(2) > a")
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(5) > ul > li:nth-child(2) > a")
 	private WebElement menu_LearningBoothcamp;
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(5) > ul > li:nth-child(3) > a")
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(5) > ul > li:nth-child(3) > a")
 	private WebElement menu_LearningClass;
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(5) > ul > li:nth-child(4) > a")
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(5) > ul > li:nth-child(4) > a")
 	private WebElement menu_LearningSyllabus;
-	//BLOG JC
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(6) > a")
+	// BLOG JC
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(6) > a")
 	private WebElement menu_Blog;
-	//CONTACT MASSAGE
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(7) > a")
+	// CONTACT MASSAGE
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(7) > a")
 	private WebElement menu_CtcMassage;
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(8) > a")
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(8) > a")
 	private WebElement menu_Transaction;
-	//USER
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(10) > a")
+	// USER
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(10) > a")
 	private WebElement menu_User;
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(10) > ul > li:nth-child(1) > a")
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(10) > ul > li:nth-child(1) > a")
 	private WebElement menu_UserBilling;
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(10) > ul > li:nth-child(2) > a")
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(10) > ul > li:nth-child(2) > a")
 	private WebElement menu_UserPending;
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(10) > ul > li:nth-child(3) > a")
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(10) > ul > li:nth-child(3) > a")
 	private WebElement menu_UserComplete;
-	@FindBy(css="#pageWrapper > div.page-body-wrapper > div.page-body > div > div:nth-child(2) > div > div > div > div.card-header > h3")
+	@FindBy(css = "#pageWrapper > div.page-body-wrapper > div.page-body > div > div:nth-child(2) > div > div > div > div.card-header > h3")
 	private WebElement DataSiswa_usercompletepage;
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(10) > ul > li:nth-child(4) > a")
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(10) > ul > li:nth-child(4) > a")
 	private WebElement menu_UserClose;
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(10) > ul > li:nth-child(5) > a")
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(10) > ul > li:nth-child(5) > a")
 	private WebElement menu_Usersubs;
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(10) > ul > li:nth-child(6) > a")
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(10) > ul > li:nth-child(6) > a")
 	private WebElement menu_UserAccesEmployee;
-	//PROGRAM
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(11) > a")
+	// PROGRAM
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(11) > a")
 	private WebElement menu_program;
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(11) > ul > li:nth-child(1) > a")
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(11) > ul > li:nth-child(1) > a")
 	private WebElement menu_programboothcamp;
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(11) > ul > li:nth-child(2) > a")
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(11) > ul > li:nth-child(2) > a")
 	private WebElement menu_programboothcampbatch;
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(11) > ul > li:nth-child(3) > a")
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(11) > ul > li:nth-child(3) > a")
 	private WebElement menu_programboothcampharga;
-	//GALERI
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(12) > a")
+	// GALERI
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(12) > a")
 	private WebElement menu_Gallery;
-	@FindBy(css="#pageWrapper > div.page-body-wrapper > div.page-body > div:nth-child(5) > div > div > div > div.card-header > h3")
+	@FindBy(css = "#pageWrapper > div.page-body-wrapper > div.page-body > div:nth-child(5) > div > div > div > div.card-header > h3")
 	private WebElement listgalery_text;
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div")
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div")
 	private WebElement menusidebar_container;
-	
+
 	public String getListgalery_text() {
 		return listgalery_text.getText();
 	}
 
-	//Setting
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(13) > a")
+	// Setting
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(13) > a")
 	private WebElement menu_Setting;
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(13) > ul > li > a")
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(13) > ul > li > a")
 	private WebElement menu_Settingtemplateemail;
-	
-	@FindBy(css="#greeting")
+
+	@FindBy(css = "#greeting")
 	private WebElement welcometoDashboard;
-	
+
 	public String getWelcometoDashboard() {
 		return welcometoDashboard.getText();
 	}
 
-	@FindBy(css="#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div")
+	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div")
 	private WebElement sideBarContainer;
-	
+
 	public void callendar() {
 		date.click();
 	}
-	@FindBy(css="#pageWrapper > div.page-body-wrapper > div.page-body > div:nth-child(2) > div > div.col-xl-4.col-lg-12.xl-50.morning-sec.box-col-12 > div > div > div.greeting-user.text-center > div.whatsnew-btn > a")
+
+	@FindBy(css = "#pageWrapper > div.page-body-wrapper > div.page-body > div:nth-child(2) > div > div.col-xl-4.col-lg-12.xl-50.morning-sec.box-col-12 > div > div > div.greeting-user.text-center > div.whatsnew-btn > a")
 	private WebElement whatnew;
-	
+
 	public WebElement getWhatnewdashboard() {
 		return whatnew;
 	}
-	
+
 	public void checkSidebarElement() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		Actions actions = new Actions(driver);
 		WebDriverWait wait = new WebDriverWait(driver, 50);
-		
-		//toogle
+
+		// toogle
 		menu_toogleeBar.click();
 		menu_toogleeBar.click();
 		menu_toogleeBar.click();
 		menu_toogleeBar.click();
-		//galeri
+		// galeri
 		menu_Gallery.click();
 		menu_dashboard.click();
-		//HOME JC
+		// HOME JC
 		menu_HomeJc.click();
 		menu_HomeTestimonial.click();
 		menu_dashboard.click();
-		//LEARNING JC
+		// LEARNING JC
 		menu_dashboard.click();
 		menu_LearningJc.click();
 		menu_LearningLms.click();// ini ngaco cuk malah ke halaman awal
@@ -153,28 +154,41 @@ private WebDriver driver;
 		menu_LearningJc.click();
 		menu_LearningSyllabus.click();// ini ngaco cuk malah ke halaman awal
 		menu_dashboard.click();
-		//BLOG JC
+		// BLOG JC
 		menu_Blog.click();
 		menu_dashboard.click();
-		//Contact Massage
+		// Contact Massage
 		menu_CtcMassage.click();
 		menu_dashboard.click();
-		//Transaction
+		// Transaction
 		menu_Transaction.click();
 		menu_dashboard.click();
-		//USER
+		// USER
+		actions.moveToElement(menu_User).perform();
 		menu_User.click();
+		actions.moveToElement(menu_UserBilling).perform();
 		menu_UserBilling.click();
+		actions.moveToElement(menu_User).perform();
 		menu_User.click();
+		actions.moveToElement(menu_UserPending).perform();
 		menu_UserPending.click();
+		actions.moveToElement(menu_User).perform();
 		menu_User.click();
+		actions.moveToElement(menu_UserComplete).perform();
 		menu_UserComplete.click();
+		js.executeScript("arguments[0].scrollIntoView();", menu_User);
+		actions.moveToElement(menu_User).perform();
 		menu_User.click();
+		js.executeScript("arguments[0].scrollIntoView();", menu_UserClose);
 		actions.moveToElement(menu_UserClose).perform();
 		menu_UserClose.click();
+		js.executeScript("arguments[0].scrollIntoView();", menu_User);
+		actions.moveToElement(menu_User).perform();
 		menu_User.click();
+		js.executeScript("arguments[0].scrollIntoView();", menu_Usersubs);
 		actions.moveToElement(menu_Usersubs).perform();
 		menu_Usersubs.click();
+		actions.moveToElement(menu_User).perform();
 		menu_User.click();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_UserAccesEmployee));
 		actions.moveToElement(menu_UserAccesEmployee).perform();
@@ -199,7 +213,7 @@ private WebDriver driver;
 		wait.until(ExpectedConditions.elementToBeClickable(menu_Gallery));
 		actions.moveToElement(menu_Gallery).perform();
 		menu_Gallery.click();
-		//Setting
+		// Setting
 		actions.dragAndDrop(listgalery_text, menusidebar_container).build().perform();
 		menu_toogleeBar.click();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_Setting));
@@ -208,11 +222,9 @@ private WebDriver driver;
 		wait.until(ExpectedConditions.elementToBeClickable(menu_Settingtemplateemail));
 		actions.moveToElement(menu_Settingtemplateemail).perform();
 		menu_Settingtemplateemail.click();
-		
-		//balik ke dashboard karna udah cek semua menu nya
+
+		// balik ke dashboard karna udah cek semua menu nya
 		menu_dashboard.click();
 
-		
 	}
 }
-
