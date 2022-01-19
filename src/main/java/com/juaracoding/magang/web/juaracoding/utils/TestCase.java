@@ -7,7 +7,11 @@ public enum TestCase {
 	T4("Learning JuaraCoding"),
 	T5("Blog JuaraCoding"),
 	T6("Contact Massage JuaraCoding"),
-	T7("Transaction JuaraCoding");
+	T7("Transaction JuaraCoding"),
+	T8("User JuaraCoding"),
+	T9("Program JuaraCoding"),
+	T10("Gallery JuaraCoding"),
+	T11("Setting JuaraCoding");
 	
 	
 	private String TestNama;

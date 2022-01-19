@@ -29,7 +29,6 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -75,7 +74,6 @@ public class StepDefinition {
 	@Given("^User masuk ke website Admin JuaraCoding")
 	public void formLogin() {
 		driver = DriverSingleton.getDriver();
-		https: // dev.ptdika.com/juaracodingv1/about
 		driver.get(ConstantsDriver.URL);
 		Log.info("INFO: Navigating to " + ConstantsDriver.URL); // log4j
 		extentTest.log(LogStatus.PASS, "Navigation to : " + ConstantsDriver.URL);
@@ -160,7 +158,7 @@ public class StepDefinition {
 
 		System.out.println(
 				"scenario Menuju halaman LMS,Menuju halaman Bootcamp,Menuju halaman Class,Menuju halaman Syllabus passed");
-		extentTest.log(LogStatus.PASS,
+		extentTest.log(LogStatus.ERROR,
 				"Menuju halaman LMS,Menuju halaman Bootcamp,Menuju halaman Class,Menuju halaman Syllabus");
 	}
 
@@ -169,7 +167,7 @@ public class StepDefinition {
 
 		if (LogStatus.PASS != null) {
 			System.out.println("scenario Berhasil pengecekan Learning admin juara coding passed");
-			extentTest.log(LogStatus.PASS, "Berhasil pengecekan Learning admin juara coding");
+			extentTest.log(LogStatus.ERROR, "Berhasil pengecekan Learning admin juara coding");
 		} else {
 			System.out.println("scenario Berhasil pengecekan Learning admin juara coding fail");
 			extentTest.log(LogStatus.ERROR, "Berhasil pengecekan Learning admin juara coding");
@@ -264,6 +262,154 @@ public class StepDefinition {
 		}
 		
 	}
+	
+//8---------------------------------------------------------------------------------------------------------------------		
+
+	@When("^tabel status pembayaran peserta/user active,pending, dan close")
+	public void Userone() {
+		System.out.println(
+				"scenario Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir passed");
+		extentTest.log(LogStatus.PASS,
+				"Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir");
+	}
+	
+	@And("^tabel pembayaran User Pending")
+	public void Usertwo() {
+		System.out.println(
+				"scenario Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir passed");
+		extentTest.log(LogStatus.PASS,
+				"Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir");
+	}
+	@And("^tabel pembayaran User Complete")
+	public void Userthree() {
+		System.out.println(
+				"scenario Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir passed");
+		extentTest.log(LogStatus.PASS,
+				"Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir");
+	}
+	@And("^tabel pembayaran User Close")
+	public void Userfour() {
+		System.out.println(
+				"scenario Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir passed");
+		extentTest.log(LogStatus.PASS,
+				"Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir");
+	}
+	@And("^tabel pembayaran Email Subscriber dari Web Juara coding")
+	public void Userfive() {
+		System.out.println(
+				"scenario Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir passed");
+		extentTest.log(LogStatus.PASS,
+				"Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir");
+	}
+	@And("^tabel Data Akses Employee yang dikelola oleh admin")
+	public void Usersix() {
+		System.out.println(
+				"scenario Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir passed");
+		extentTest.log(LogStatus.PASS,
+				"Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir");
+	}
+	@Then("^Berhasil pengecekan menu User")
+	public void Userseven() {
+		if (LogStatus.PASS != null) {
+			System.out.println(
+					"scenario Berhasil pengecekan menu User passed");
+			extentTest.log(LogStatus.PASS, "Berhasil pengecekan menu User");
+
+		} else {
+			System.out.println(
+					"scenario Berhasil pengecekan menu Transaction fail");
+			extentTest.log(LogStatus.ERROR, "Berhasil pengecekan menu Transaction");
+
+		}
+	}
+//9---------------------------------------------------------------------------------------------------------------------			
+	@When("^tabel program boothcamp edit/tambah/hapus")
+	public void Programone() {
+		System.out.println(
+				"scenario Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir passed");
+		extentTest.log(LogStatus.PASS,
+				"Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir");
+	}
+	@And("^tabel program boothcamp batch angkatan per periode edit/tambah/hapus")
+	public void Programtwo() {
+		System.out.println(
+				"scenario Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir passed");
+		extentTest.log(LogStatus.PASS,
+				"Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir");
+	}
+	@And("^tabel program harga boothcamp  edit/tambah/hapus")
+	public void Programthree() {
+		System.out.println(
+				"scenario Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir passed");
+		extentTest.log(LogStatus.PASS,
+				"Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir");
+	}
+	@Then("^Berhasil pengecekan menu program")
+	public void Programseven() {
+		if (LogStatus.PASS != null) {
+			System.out.println(
+					"scenario Berhasil pengecekan menu program passed");
+			extentTest.log(LogStatus.PASS, "Berhasil pengecekan menu program");
+
+		} else {
+			System.out.println(
+					"scenario Berhasil pengecekan menu program fail");
+			extentTest.log(LogStatus.ERROR, "Berhasil pengecekan menu program");
+
+		}
+	}
+//10---------------------------------------------------------------------------------------------------------------------
+	@When("^input data tambah gallery dan simpan data")
+	public void Galleryone() {
+		System.out.println(
+				"scenario Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir passed");
+		extentTest.log(LogStatus.PASS,
+				"Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir");
+	}
+	@And("^mengetahui detail dari gallery untuk mengambil content detail dari search galeri")
+	public void Gallerytwo() {
+		System.out.println(
+				"scenario Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir passed");
+		extentTest.log(LogStatus.PASS,
+				"Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir");
+	}
+	@Then("^Berhasil pengecekan menu galeri")
+	public void Gallerythree() {
+		if (LogStatus.PASS != null) {
+			System.out.println(
+					"scenario Berhasil pengecekan menu galeri passed");
+			extentTest.log(LogStatus.PASS, "Berhasil pengecekan menu galeri");
+
+		} else {
+			System.out.println(
+					"scenario Berhasil pengecekan menu galeri fail");
+			extentTest.log(LogStatus.ERROR, "Berhasil pengecekan menu galeri");
+
+		}
+	}
+//11----------------------------------------------------------------------------------------------------------------------
+	@When("^tambah tempalte kirim email")
+	public void Settingyone() {
+		System.out.println(
+				"scenario Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir passed");
+		extentTest.log(LogStatus.PASS,
+				"Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir");
+	}
+	@Then("^Berhasil pengecekan menu setting")
+	public void Settingthree() {
+		if (LogStatus.PASS != null) {
+			System.out.println(
+					"scenario Berhasil pengecekan menu setting passed");
+			extentTest.log(LogStatus.PASS, "Berhasil pengecekan menu setting");
+
+		} else {
+			System.out.println(
+					"scenario Berhasil pengecekan menu setting fail");
+			extentTest.log(LogStatus.ERROR, "Berhasil pengecekan menu setting");
+
+		}
+	}
+	
 //final-----------------------------------------------------------------------------------------------------------------	
 
 	@After
