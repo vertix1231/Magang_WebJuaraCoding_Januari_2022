@@ -63,6 +63,8 @@ public class BlogAdminPage {
 	private WebElement blogeditcontent;
 	@FindBy(css="#pageWrapper > div.page-body-wrapper > div.page-body > div:nth-child(2) > div > div > div > form > div.card-footer.text-end > input")
 	private WebElement submitblogedit;
+
+
 	
 	public WebElement getPostblogSuccesElement() {
 		return postblogSucces;
@@ -76,7 +78,7 @@ public class BlogAdminPage {
 		menu_Blog.click();
 		addBlogbtn.click();
 		uploadBlogBtn.sendKeys("D:/ChromeDriver/eren.jpg");
-		blogtitile.sendKeys("blog coba coba aja20-18");
+		blogtitile.sendKeys("blog coba coba aja40-21");
 //		lsPublishblog(1);
 //		lsSetHomehblog(1);
 		blogcontentpreview.sendKeys("blog bagi orang yang ingin coba coba");
@@ -91,6 +93,7 @@ public class BlogAdminPage {
 		menu_Blog.click();
 		seacrhBlog.sendKeys("blog coba coba aja5");
 		seacrhBlog.sendKeys(Keys.ENTER);
+		js.executeScript("arguments[0].scrollIntoView();", blogSelectitem);
 		blogSelectitem.click();
 		uploadeditBlogImgt.sendKeys("D:/ChromeDriver/ac2.png");
 		
