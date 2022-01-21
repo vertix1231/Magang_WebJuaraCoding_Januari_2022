@@ -14,10 +14,12 @@ import com.juaracoding.magang.web.juaracoding.driver.DriverSingleton;
 import com.juaracoding.magang.web.juaracoding.pages.BlogAdminPage;
 import com.juaracoding.magang.web.juaracoding.pages.ContactMassageAdminPage;
 import com.juaracoding.magang.web.juaracoding.pages.DashboardAdminPage;
+import com.juaracoding.magang.web.juaracoding.pages.GalleryAdminPage;
 import com.juaracoding.magang.web.juaracoding.pages.HomeAdminPage;
 import com.juaracoding.magang.web.juaracoding.pages.LearningAdminPage;
 import com.juaracoding.magang.web.juaracoding.pages.LoginAdminPage;
 import com.juaracoding.magang.web.juaracoding.pages.ProgramAdminPage;
+import com.juaracoding.magang.web.juaracoding.pages.SettingAdminPage;
 import com.juaracoding.magang.web.juaracoding.pages.TransactionAdminPage;
 import com.juaracoding.magang.web.juaracoding.pages.UserAdminPage;
 import com.juaracoding.magang.web.juaracoding.utils.ConfigurationProperties;
@@ -50,6 +52,8 @@ public class StepDefinition {
 	TransactionAdminPage transactionAdminPage;
 	UserAdminPage userAdminPage;
 	ProgramAdminPage programAdminPage;
+	GalleryAdminPage galleryAdminPage;
+	SettingAdminPage settingAdminPage;
 	ExtentTest extentTest;
 	static ExtentReports extentReports = new ExtentReports("src/main/resources/reporttest_Magang_WebJCCODING.html");
 
@@ -71,6 +75,8 @@ public class StepDefinition {
 		transactionAdminPage = new TransactionAdminPage();
 		userAdminPage = new UserAdminPage();
 		programAdminPage = new ProgramAdminPage();
+		galleryAdminPage = new GalleryAdminPage();
+		settingAdminPage = new SettingAdminPage();
 		TestCase[] tests = TestCase.values();
 		extentTest = extentReports.startTest(tests[Utils.testcount].getTestNama());
 		Log.getLogData(Log.class.getName()); // log4j
@@ -348,6 +354,7 @@ public class StepDefinition {
 
 	@And("^tabel program harga boothcamp  edit/tambah/hapus")
 	public void Programthree() {
+//		programAdminPage.programBoothcampPrice();
 		System.out.println("scenario tabel program harga boothcamp  edit/tambah/hapus passed");
 		extentTest.log(LogStatus.PASS, "tabel program harga boothcamp  edit/tambah/hapus");
 	}
@@ -368,12 +375,14 @@ public class StepDefinition {
 //10---------------------------------------------------------------------------------------------------------------------
 	@When("^input data tambah gallery dan simpan data")
 	public void Galleryone() {
+		galleryAdminPage.galleryAdd();
 		System.out.println("scenario input data tambah gallery dan simpan data passed");
 		extentTest.log(LogStatus.PASS, "input data tambah gallery dan simpan data");
 	}
 
 	@And("^mengetahui detail dari gallery untuk mengambil content detail dari search galeri")
 	public void Gallerytwo() {
+		galleryAdminPage.galleryEdit();
 		System.out.println(
 				"scenario mengetahui detail dari gallery untuk mengambil content detail dari search galeri passed");
 		extentTest.log(LogStatus.PASS,
@@ -396,13 +405,13 @@ public class StepDefinition {
 //11----------------------------------------------------------------------------------------------------------------------
 	@When("^tambah tempalte kirim email")
 	public void Settingyone() {
-		
+		settingAdminPage.settingAddTempalte();
 		System.out.println("scenario tambah tempalte kirim email passed");
 		extentTest.log(LogStatus.PASS, "tambah tempalte kirim email");
 	}
 	@And("^edit template email yang akan dipilih")
 	public void Settingytwo() {
-		
+		settingAdminPage.settingEditTempalte();
 		System.out.println("scenario edit template email yang akan dipilih passed");
 		extentTest.log(LogStatus.PASS, "edit template email yang akan dipilih");
 	}
