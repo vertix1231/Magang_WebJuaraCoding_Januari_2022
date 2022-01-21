@@ -78,30 +78,35 @@ public class BlogAdminPage {
 		menu_Blog.click();
 		addBlogbtn.click();
 		uploadBlogBtn.sendKeys("D:/ChromeDriver/eren.jpg");
-		blogtitile.sendKeys("blog coba coba aja40-21");
+		blogtitile.sendKeys("blog coba coba aja60-5");
 //		lsPublishblog(1);
 //		lsSetHomehblog(1);
 		blogcontentpreview.sendKeys("blog bagi orang yang ingin coba coba");
 		blogcontent.sendKeys("detail adadadad dari blog bagi orang yang ingin coba coba");
 		submitblogadd.click();
-		
 	}
 	public void edit_item_testimonial() {
-		WebDriverWait wait = new WebDriverWait(driver,30);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
 	
 		menu_Blog.click();
 		seacrhBlog.sendKeys("blog coba coba aja5");
 		seacrhBlog.sendKeys(Keys.ENTER);
-		js.executeScript("arguments[0].scrollIntoView();", blogSelectitem);
+//		js.executeScript("arguments[0].scrollIntoView();", blogSelectitem);
+		wait.until(ExpectedConditions.elementToBeClickable(blogSelectitem));
+		actions.moveToElement(blogSelectitem).perform();
 		blogSelectitem.click();
+		wait.until(ExpectedConditions.elementToBeClickable(uploadeditBlogImgt));
+		actions.moveToElement(uploadeditBlogImgt).perform();
 		uploadeditBlogImgt.sendKeys("D:/ChromeDriver/ac2.png");
 		
 //		lsPublishblog(1);
 //		lsSetHomehblog(1);
 //		blogeditcontentpreview.sendKeys("blog edit edit edit bagi orang yang ingin coba coba");
 //		blogeditcontent.sendKeys("detail edit edit edit adadadad dari blog bagi orang yang ingin coba coba");
-		js.executeScript("window.scrollBy(0,1000)");
+		wait.until(ExpectedConditions.elementToBeClickable(submitblogedit));
+		actions.moveToElement(submitblogedit).perform();
 //		wait.until(ExpectedConditions.elementToBeClickable(submitblogedit));
 		submitblogedit.click();
 	}

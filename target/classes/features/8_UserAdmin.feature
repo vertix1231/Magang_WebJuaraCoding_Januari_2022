@@ -1,5 +1,5 @@
 Feature: User JuaraCoding
-	Scenario: halaman tabel status pembayaran peserta/user active,pending,close,subscribe secara keseluruhan terutama management akses role user
+	Scenario: halaman tabel status pembayaran peserta/user active,pending,close,subscribe secara keseluruhan terutama management akses role user(admin)
 		When tabel status pembayaran peserta/user active,pending, dan close
 		And tabel pembayaran User Pending
 		And tabel pembayaran User Complete

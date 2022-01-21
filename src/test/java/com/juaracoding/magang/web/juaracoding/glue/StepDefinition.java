@@ -53,7 +53,9 @@ public class StepDefinition {
 	ExtentTest extentTest;
 	static ExtentReports extentReports = new ExtentReports("src/main/resources/reporttest_Magang_WebJCCODING.html");
 
-//start---------------------------------------------------------------------------------------------------------------------	
+//start WEB JCODING---------------------------------------------------------------------------------------------------------------------
+
+//MULAI TESTSTING ADMIN WEB JCODING-------------------------------------------------------------------------------------------------------------------
 	@Autowired
 	ConfigurationProperties configuration;
 
@@ -332,13 +334,14 @@ public class StepDefinition {
 //9---------------------------------------------------------------------------------------------------------------------			
 	@When("^tabel program boothcamp edit/tambah/hapus")
 	public void Programone() {
-		
+		programAdminPage.programBoothcamp();
 		System.out.println("scenario tabel program boothcamp edit/tambah/hapus passed");
 		extentTest.log(LogStatus.PASS, "tabel program boothcamp edit/tambah/hapus");
 	}
 
 	@And("^tabel program boothcamp batch angkatan per periode edit/tambah/hapus")
 	public void Programtwo() {
+//		programAdminPage.programBoothcampBatch();
 		System.out.println("scenario tabel program boothcamp batch angkatan per periode edit/tambah/hapus passed");
 		extentTest.log(LogStatus.PASS, "tabel program boothcamp batch angkatan per periode edit/tambah/hapus");
 	}
@@ -393,9 +396,15 @@ public class StepDefinition {
 //11----------------------------------------------------------------------------------------------------------------------
 	@When("^tambah tempalte kirim email")
 	public void Settingyone() {
-		programAdminPage.programBoothcamp();
+		
 		System.out.println("scenario tambah tempalte kirim email passed");
 		extentTest.log(LogStatus.PASS, "tambah tempalte kirim email");
+	}
+	@And("^edit template email yang akan dipilih")
+	public void Settingytwo() {
+		
+		System.out.println("scenario edit template email yang akan dipilih passed");
+		extentTest.log(LogStatus.PASS, "edit template email yang akan dipilih");
 	}
 
 	@Then("^Berhasil pengecekan menu setting")
@@ -410,13 +419,42 @@ public class StepDefinition {
 
 		}
 	}
+	
+	
+	
+//AKHIR TESTSTING ADMIN WEB JCODING-------------------------------------------------------------------------------------------------------------------
 
-//final-----------------------------------------------------------------------------------------------------------------	
+	
+	
+	
+	
+	
+	
+//MULAI TESTSTING USER WEB JCODING-------------------------------------------------------------------------------------------------------------------
+
+	
+	
+	
+	
+	
+	
+	
+	
+//AKHIR TESTSTING ADMIN WEB JCODING-------------------------------------------------------------------------------------------------------------------
+	
+	
+	
+	
+	
+	
+	
+//final WEB JCODING---------------------------------------------------------------------------------------------------------------------
 
 	@After
 	public void closeObject() {
 		extentReports.endTest(extentTest);
 		extentReports.flush();
 	}
+	
 
 }

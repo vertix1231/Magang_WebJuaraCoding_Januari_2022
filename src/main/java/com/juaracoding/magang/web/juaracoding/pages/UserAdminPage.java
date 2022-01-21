@@ -42,8 +42,7 @@ public class UserAdminPage {
 	private WebElement menu_Usersubs;
 	@FindBy(css = "#simple-bar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > li:nth-child(10) > ul > li:nth-child(6) > a")
 	private WebElement menu_UserAccesEmployee;
-	@FindBy(css = "#pageWrapper > div.page-body-wrapper > div.page-body > div > div:nth-child(2) > div > div > div > div.card-block.row > div > div > table > tbody > tr:nth-child(8) > td:nth-child(9) > a")
-	// user billing
+	@FindBy(css = "#pageWrapper > div.page-body-wrapper > div.page-body > div > div:nth-child(2) > div > div > div > div.card-block.row > div > div > table > tbody > tr:nth-child(10) > td:nth-child(9) > a")
 	private WebElement userbillingitemselected;
 	@FindBy(css = "#pageWrapper > div.page-body-wrapper > div.page-body > div > div:nth-child(2) > div > div > div > div.card-block.row > div > div > table > tbody > tr:nth-child(1) > td:nth-child(9) > a")
 	private WebElement userbillingUpfront;
