@@ -11,7 +11,15 @@ public enum TestCase {
 	T8("User JuaraCoding"),
 	T9("Program JuaraCoding"),
 	T10("Gallery JuaraCoding"),
-	T11("Setting JuaraCoding");
+	T11("Setting JuaraCoding"),
+	T12("Testing Home Page"),
+	T13("Testing Bootcamp Page"),
+	T14("Testing Syllabus Page"),
+	T15("Testing Course Page"),
+	T16("Testing About Page"),
+	T17("Testing Blog Page"),
+	T18("Testing Contact Page"),
+	T19("Testing Register Page");
 	
 	
 	private String TestNama;

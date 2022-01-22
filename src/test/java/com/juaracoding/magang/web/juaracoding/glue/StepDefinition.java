@@ -11,15 +11,23 @@ import org.springframework.test.context.ContextConfiguration;
 
 import com.juaracoding.magang.web.juaracoding.config.AutomationFrameworkConfiguration;
 import com.juaracoding.magang.web.juaracoding.driver.DriverSingleton;
+import com.juaracoding.magang.web.juaracoding.pages.AboutPage;
 import com.juaracoding.magang.web.juaracoding.pages.BlogAdminPage;
+import com.juaracoding.magang.web.juaracoding.pages.BlogPage;
+import com.juaracoding.magang.web.juaracoding.pages.BootcampPage;
 import com.juaracoding.magang.web.juaracoding.pages.ContactMassageAdminPage;
+import com.juaracoding.magang.web.juaracoding.pages.ContactPage;
+import com.juaracoding.magang.web.juaracoding.pages.CoursePage;
 import com.juaracoding.magang.web.juaracoding.pages.DashboardAdminPage;
+import com.juaracoding.magang.web.juaracoding.pages.DashboardPage;
 import com.juaracoding.magang.web.juaracoding.pages.GalleryAdminPage;
 import com.juaracoding.magang.web.juaracoding.pages.HomeAdminPage;
 import com.juaracoding.magang.web.juaracoding.pages.LearningAdminPage;
 import com.juaracoding.magang.web.juaracoding.pages.LoginAdminPage;
 import com.juaracoding.magang.web.juaracoding.pages.ProgramAdminPage;
+import com.juaracoding.magang.web.juaracoding.pages.RegisterPage;
 import com.juaracoding.magang.web.juaracoding.pages.SettingAdminPage;
+import com.juaracoding.magang.web.juaracoding.pages.SyllabusPage;
 import com.juaracoding.magang.web.juaracoding.pages.TransactionAdminPage;
 import com.juaracoding.magang.web.juaracoding.pages.UserAdminPage;
 import com.juaracoding.magang.web.juaracoding.utils.ConfigurationProperties;
@@ -43,31 +51,39 @@ import io.cucumber.spring.CucumberContextConfiguration;
 @ContextConfiguration(classes = AutomationFrameworkConfiguration.class)
 public class StepDefinition {
 	private WebDriver driver;
-	LoginAdminPage login;
-	DashboardAdminPage dashboard;
-	HomeAdminPage homeAdminPage;
-	LearningAdminPage learningAdminPage;
-	BlogAdminPage blogAdminPage;
-	ContactMassageAdminPage contactMassageAdminPage;
-	TransactionAdminPage transactionAdminPage;
-	UserAdminPage userAdminPage;
-	ProgramAdminPage programAdminPage;
-	GalleryAdminPage galleryAdminPage;
-	SettingAdminPage settingAdminPage;
-	ExtentTest extentTest;
+	private LoginAdminPage login;
+	private DashboardAdminPage dashboardAdminPage;
+	private HomeAdminPage homeAdminPage;
+	private LearningAdminPage learningAdminPage;
+	private BlogAdminPage blogAdminPage;
+	private ContactMassageAdminPage contactMassageAdminPage;
+	private TransactionAdminPage transactionAdminPage;
+	private UserAdminPage userAdminPage;
+	private ProgramAdminPage programAdminPage;
+	private GalleryAdminPage galleryAdminPage;
+	private SettingAdminPage settingAdminPage;
+	private DashboardPage dashboard;
+	private BootcampPage bootcamp;
+	private SyllabusPage syllabus;
+	private CoursePage course;
+	private AboutPage about;
+	private BlogPage blog;
+	private ContactPage contact;
+	private RegisterPage regist;
+	private ExtentTest extentTest;
 	static ExtentReports extentReports = new ExtentReports("src/main/resources/reporttest_Magang_WebJCCODING.html");
 
 //start WEB JCODING---------------------------------------------------------------------------------------------------------------------
 
 //MULAI TESTSTING ADMIN WEB JCODING-------------------------------------------------------------------------------------------------------------------
 	@Autowired
-	ConfigurationProperties configuration;
+	ConfigurationProperties configurationProperties;
 
 	@Before
 	public void initializeObject() {
-		DriverSingleton.getInstance(configuration.getBrowser());
+		DriverSingleton.getInstance(configurationProperties.getBrowser());
 		login = new LoginAdminPage();
-		dashboard = new DashboardAdminPage();
+		dashboardAdminPage = new DashboardAdminPage();
 		homeAdminPage = new HomeAdminPage();
 		learningAdminPage = new LearningAdminPage();
 		blogAdminPage = new BlogAdminPage();
@@ -77,6 +93,16 @@ public class StepDefinition {
 		programAdminPage = new ProgramAdminPage();
 		galleryAdminPage = new GalleryAdminPage();
 		settingAdminPage = new SettingAdminPage();
+		dashboard = new DashboardPage();
+		about = new AboutPage();
+//		learning = new LearningPage();
+	    bootcamp = new BootcampPage();
+	    syllabus = new SyllabusPage();
+	    course = new CoursePage();
+		blog = new BlogPage();
+		contact = new ContactPage();
+		regist = new RegisterPage();
+//		bucket = new BucketPage();
 		TestCase[] tests = TestCase.values();
 		extentTest = extentReports.startTest(tests[Utils.testcount].getTestNama());
 		Log.getLogData(Log.class.getName()); // log4j
@@ -88,14 +114,14 @@ public class StepDefinition {
 	@Given("^User masuk ke website Admin JuaraCoding")
 	public void formLogin() {
 		driver = DriverSingleton.getDriver();
-		driver.get(ConstantsDriver.URL);
-		Log.info("INFO: Navigating to " + ConstantsDriver.URL); // log4j
-		extentTest.log(LogStatus.PASS, "Navigation to : " + ConstantsDriver.URL);
+		driver.get(ConstantsDriver.URL_ADMIN);
+		Log.info("INFO: Navigating to " + ConstantsDriver.URL_ADMIN); // log4j
+		extentTest.log(LogStatus.PASS, "Navigation to : " + ConstantsDriver.URL_ADMIN);
 	}
 
 	@When("^User input username dan password")
 	public void User_input_username_and_password() {
-		login.loginForm(configuration.getMyusername(), configuration.getPassword());
+		login.loginForm(configurationProperties.getMyusername_admin(), configurationProperties.getPassword_admin());
 
 		System.out.println("scenario User input username dan password passed");
 		extentTest.log(LogStatus.PASS, "User input username dan password");
@@ -119,14 +145,14 @@ public class StepDefinition {
 //2---------------------------------------------------------------------------------------------------------------------	
 	@When("^Menampilkan List tiap menu dan pengecekan kerja tiap menu di sidebar")
 	public void checkAllSidebarMenu() {
-		dashboard.checkSidebarElement();
+		dashboardAdminPage.checkSidebarElement();
 		System.out.println("scenario Menampilkan List tiap menu dan pengecekan kerja tiap menu di sidebar passed");
 		extentTest.log(LogStatus.PASS, "Menampilkan List tiap menu dan pengecekan kerja tiap menu di sidebar");
 	}
 
 	@Then("^Berhasil pengecekan dashboard balik ke halaman dashboard")
 	public void dashboardCheckFinished() {
-		if (dashboard.getWhatnewdashboard().isDisplayed()) {
+		if (dashboardAdminPage.getWhatnewdashboard().isDisplayed()) {
 			System.out.println("scenario Berhasil pengecekan dashboard balik ke halaman dashboard passed");
 			extentTest.log(LogStatus.PASS, "Berhasil pengecekan dashboard balik ke halaman dashboard");
 		} else {
@@ -409,6 +435,7 @@ public class StepDefinition {
 		System.out.println("scenario tambah tempalte kirim email passed");
 		extentTest.log(LogStatus.PASS, "tambah tempalte kirim email");
 	}
+
 	@And("^edit template email yang akan dipilih")
 	public void Settingytwo() {
 		settingAdminPage.settingEditTempalte();
@@ -428,39 +455,176 @@ public class StepDefinition {
 
 		}
 	}
-	
-	
-	
+
 //AKHIR TESTSTING ADMIN WEB JCODING-------------------------------------------------------------------------------------------------------------------
 
-	
-	
-	
-	
-	
-	
 //MULAI TESTSTING USER WEB JCODING-------------------------------------------------------------------------------------------------------------------
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	// Menu Home
+	@Given("^User masuk halaman Web Juara Coding")
+	public void homePage() {
+		driver = DriverSingleton.getDriver();
+		driver.get(ConstantsDriver.URL_USER);
+		extentTest.log(LogStatus.PASS, "User masuk halaman Web Juara Coding");
+	}
+
+	@Then("^User masukkan email dan tekan subscribe")
+	public void User_masukkan_email_dan_tekan_subscribe() {
+		dashboard.sendEmailandSubscribe(configurationProperties.getEmail_user());
+		extentTest.log(LogStatus.PASS, "User masukkan email dan tekan subscribe");
+	}
+
+	// Submenu Bootcamp
+	// Dropdown Learning
+	@When("^User click list Learning satu")
+	public void User_click_list_Learning_satu() {
+		bootcamp.learningDropDown();
+		extentTest.log(LogStatus.PASS, "User click list Learning satu");
+	}
+
+	@Then("^User pindah ke halaman Bootcamp")
+	public void User_pindah_ke_halaman_Bootcamp() {
+		driver = DriverSingleton.getDriver();
+		driver.get("https://dev.ptdika.com/juaracodingv1/bootcamp");
+//			bootcamp.pageBootcamp();
+		extentTest.log(LogStatus.PASS, "User pindah ke halaman Bootcamp");
+	}
+
+	// Submenu Syllabus
+
+	// Dropdown Learning
+	@When("^User click list Learning dua")
+	public void User_click_list_Learning_dua() {
+		bootcamp.learningDropDown();
+		extentTest.log(LogStatus.PASS, "User click list Learning dua");
+	}
+
+	@And("^User pindah ke halaman Syllabus")
+	public void User_pindah_ke_halaman_Syllabus() {
+		syllabus.pageSyllabus();
+		extentTest.log(LogStatus.PASS, "User pindah ke halaman Syllabus");
+	}
+
+	@When("^User click profile tab Syllabus")
+	public void User_click_profile_tab_Syllabus() {
+		syllabus.ProfileTabQualification();
+		extentTest.log(LogStatus.PASS, "User click profile tab Syllabus");
+	}
+
+	@Then("^User click profile tab Qualfication")
+	public void User_click_profile_tab_Qualfication() {
+		syllabus.ProfileTabQualification();
+		extentTest.log(LogStatus.PASS, "User click profile tab Qualfication");
+	}
+
+	// Submenu Course
+	@When("^User click list Learning tiga")
+	public void User_click_list_Learning_tiga() {
+		bootcamp.learningDropDown();
+		extentTest.log(LogStatus.PASS, "User click list Learning tiga");
+	}
+
+	@And("^User pindah ke halaman Course")
+	public void User_pindah_ke_halaman_Course() {
+		course.pageCourse();
+		extentTest.log(LogStatus.PASS, "User pindah ke halaman Course");
+	}
+
+	@And("^User click List Course")
+	public void User_click_List_Course() {
+		course.listCourse();
+		extentTest.log(LogStatus.PASS, "User click List Course");
+	}
+
+	@And("^User search Course")
+	public void User_search_Course() {
+		course.searchCourses(configurationProperties.getCourse_user());
+		extentTest.log(LogStatus.PASS, "User search Course");
+	}
+
+	@Then("^User click Search")
+	public void User_click_Search() {
+		course.clickSearch();
+		extentTest.log(LogStatus.PASS, "User click Search");
+	}
+
+	// Menu About
+	@Then("^User pindah ke halaman About")
+	public void User_pindah_ke_halaman_About() {
+		about.clickAbout();
+		extentTest.log(LogStatus.PASS, "User pindah ke halaman About");
+	}
+
+	// Menu Blog
+	@When("^User pindah ke halaman Blog")
+	public void User_pindah_ke_halaman_Blog() {
+		blog.menuBlog();
+		extentTest.log(LogStatus.PASS, "User pindah ke halaman Blog");
+	}
+
+	@And("^User pindah nomor halaman")
+	public void User_pindah_nomor_halaman() {
+		blog.clickPageNumb();
+		extentTest.log(LogStatus.PASS, "User pindah nomor halaman");
+	}
+
+	@Then("^User click Detail Blog")
+	public void User_click_Detail_Blog() {
+		blog.chooseBlog();
+		extentTest.log(LogStatus.PASS, "User click Detail Blog");
+	}
+
+	// Menu Contact
+	@When("^User click Contact")
+	public void User_click_Contact() {
+		contact.pageContact();
+		extentTest.log(LogStatus.PASS, "User click Contact");
+	}
+
+	@And("^User input data Contact")
+	public void User_input_data_Contact() {
+		contact.formContact(configurationProperties.getFullname_user(), configurationProperties.getEmail2_user(), configurationProperties.getPhone_user(),
+				configurationProperties.getSubject_user(), configurationProperties.getMessage_user());
+		extentTest.log(LogStatus.PASS, "User input data Contact");
+	}
+
+	@Then("^User click Send Message")
+	public void User_click_Send_Message() {
+		contact.sendMessage();
+		extentTest.log(LogStatus.PASS, "User click Send Message");
+	}
+
+	// Register Page
+	@When("^User masuk halaman registrasi")
+	public void User_masuk_halaman_registrasi() {
+		regist.registerPage();
+		extentTest.log(LogStatus.PASS, "User masuk halaman registrasi");
+	}
+
+	@And("^User input formulir")
+	public void User_input_formulir() {
+		regist.formPendaftaran(configurationProperties.getFirstName_user(), configurationProperties.getLastName_user(),
+				configurationProperties.getEmailStudents_user(), configurationProperties.getDateOfBirth_user(), configurationProperties.getAddress_user(),
+				configurationProperties.getCity_user(), configurationProperties.getPostCode_user(), configurationProperties.getMobilePhone_user(),
+				configurationProperties.getRelativesPhone_user(), configurationProperties.getMotivation_user());
+		extentTest.log(LogStatus.PASS, "User input formulir");
+	}
+
+	@Then("^User kirim formulir")
+	public void User_kirim_formulir() {
+		regist.clickSend();
+		extentTest.log(LogStatus.PASS, "User kirim formulir");
+	}
+
+	// Bucket Page
+//		@Then("^User tekan button pay")
+//		public void User_tekan_button_pay() {
+//			bucket.pay();
+//			extentTest.log(LogStatus.PASS, "User tekan button pay");
+//		}
+
 //AKHIR TESTSTING USER WEB JCODING-------------------------------------------------------------------------------------------------------------------
-	
-	
-	
-	
-	
-	
-	
+
 //final WEB JCODING---------------------------------------------------------------------------------------------------------------------
 
 	@After
@@ -468,6 +632,5 @@ public class StepDefinition {
 		extentReports.endTest(extentTest);
 		extentReports.flush();
 	}
-	
 
 }

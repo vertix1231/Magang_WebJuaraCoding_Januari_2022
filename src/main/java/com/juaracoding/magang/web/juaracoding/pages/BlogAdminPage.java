@@ -78,7 +78,7 @@ public class BlogAdminPage {
 		menu_Blog.click();
 		addBlogbtn.click();
 		uploadBlogBtn.sendKeys("D:/ChromeDriver/eren.jpg");
-		blogtitile.sendKeys("blog coba coba aja70-0");
+		blogtitile.sendKeys("blog coba coba aja60-25");
 //		lsPublishblog(1);
 //		lsSetHomehblog(1);
 		blogcontentpreview.sendKeys("blog bagi orang yang ingin coba coba");
