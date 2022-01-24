@@ -463,6 +463,7 @@ public class StepDefinition {
 	// Menu Home
 	@Given("^User masuk halaman Web Juara Coding")
 	public void homePage() {
+		dashboard.logoutDashboardPeserta();
 		driver = DriverSingleton.getDriver();
 		driver.get(ConstantsDriver.URL_USER);
 		extentTest.log(LogStatus.PASS, "User masuk halaman Web Juara Coding");

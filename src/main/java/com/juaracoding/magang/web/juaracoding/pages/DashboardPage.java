@@ -26,6 +26,12 @@ public class DashboardPage {
 	@FindBy(id = "button-addon2")
 	private WebElement subscribe;
 	
+	@FindBy(css="#navbarsMenu > a")
+	private WebElement logoutWebPeserta;
+	
+	public void logoutDashboardPeserta() {
+		logoutWebPeserta.click();
+	}
 	public void sendEmailandSubscribe(String email) {
 		driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
 		txtEmail.sendKeys(email);

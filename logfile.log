@@ -3831,3 +3831,223 @@
 2022-01-22 14:13:45,308 INFO  [Log] Test called: Testing Contact Page has started 
 2022-01-22 14:15:38,435 INFO  [Log] Test called: Testing Register Page has started 
 2022-01-22 14:16:45,364 INFO  [Log] Test called: Testing Register Page has started 
+2022-01-23 17:04:41,404 INFO  [Log] Test called: Form Sign In has started 
+2022-01-23 17:04:44,289 INFO  [Log] INFO: Navigating to https://dev.ptdika.com/juaracodingv1/admin/login 
+2022-01-23 17:04:47,739 INFO  [Log] Test called: Dashboard Web Juara Coding has started 
+2022-01-23 17:05:23,042 INFO  [Log] Test called: Home JuaraCoding has started 
+2022-01-23 17:05:30,955 INFO  [Log] Test called: Learning JuaraCoding has started 
+2022-01-23 17:05:31,033 INFO  [Log] Test called: Blog JuaraCoding has started 
+2022-01-23 17:06:06,540 INFO  [Log] Test called: Contact Massage JuaraCoding has started 
+2022-01-23 17:06:07,564 INFO  [Log] Test called: Transaction JuaraCoding has started 
+2022-01-23 17:06:11,107 INFO  [Log] Test called: User JuaraCoding has started 
+2022-01-23 17:06:30,625 INFO  [Log] Test called: Program JuaraCoding has started 
+2022-01-23 17:06:31,826 INFO  [Log] Test called: Gallery JuaraCoding has started 
+2022-01-23 17:06:33,310 INFO  [Log] Test called: Setting JuaraCoding has started 
+2022-01-23 17:06:35,334 INFO  [Log] Test called: Testing Home Page has started 
+2022-01-23 17:06:36,422 INFO  [Log] Test called: Testing Bootcamp Page has started 
+2022-01-23 17:06:37,536 INFO  [Log] Test called: Testing Syllabus Page has started 
+2022-01-23 17:06:39,764 INFO  [Log] Test called: Testing Course Page has started 
+2022-01-23 17:06:40,205 INFO  [Log] Test called: Testing About Page has started 
+2022-01-23 17:06:41,666 INFO  [Log] Test called: Testing Blog Page has started 
+2022-01-23 17:06:43,926 INFO  [Log] Test called: Testing Contact Page has started 
+2022-01-23 17:09:43,989 INFO  [Log] Test called: Testing Register Page has started 
+2022-01-23 20:58:16,082 INFO  [Log] Test called: Form Sign In has started 
+2022-01-23 20:58:16,082 INFO  [Log] Test called: Form Sign In has started 
+2022-01-23 20:58:19,828 INFO  [Log] INFO: Navigating to https://dev.ptdika.com/juaracodingv1/admin/login 
+2022-01-23 20:58:21,737 INFO  [Log] INFO: Navigating to https://dev.ptdika.com/juaracodingv1/admin/login 
+2022-01-23 20:58:29,011 INFO  [Log] Test called: Dashboard Web Juara Coding has started 
+2022-01-23 20:58:29,040 INFO  [Log] Test called: Dashboard Web Juara Coding has started 
+2022-01-23 20:59:11,547 INFO  [Log] Test called: Home JuaraCoding has started 
+2022-01-23 20:59:14,226 INFO  [Log] Test called: Home JuaraCoding has started 
+2022-01-23 20:59:20,804 INFO  [Log] Test called: Learning JuaraCoding has started 
+2022-01-23 20:59:20,976 INFO  [Log] Test called: Blog JuaraCoding has started 
+2022-01-23 20:59:23,492 INFO  [Log] Test called: Learning JuaraCoding has started 
+2022-01-23 20:59:23,583 INFO  [Log] Test called: Blog JuaraCoding has started 
+2022-01-23 20:59:32,968 INFO  [Log] Test called: Contact Massage JuaraCoding has started 
+2022-01-23 20:59:33,021 INFO  [Log] Test called: Transaction JuaraCoding has started 
+2022-01-23 20:59:33,110 INFO  [Log] Test called: User JuaraCoding has started 
+2022-01-23 20:59:33,151 INFO  [Log] Test called: Program JuaraCoding has started 
+2022-01-23 20:59:33,191 INFO  [Log] Test called: Gallery JuaraCoding has started 
+2022-01-23 20:59:33,254 INFO  [Log] Test called: Setting JuaraCoding has started 
+2022-01-23 20:59:33,299 INFO  [Log] Test called: Testing Home Page has started 
+2022-01-23 20:59:33,426 INFO  [Log] Test called: Testing Bootcamp Page has started 
+2022-01-23 20:59:33,470 INFO  [Log] Test called: Testing Syllabus Page has started 
+2022-01-23 20:59:33,515 INFO  [Log] Test called: Testing Course Page has started 
+2022-01-23 20:59:33,577 INFO  [Log] Test called: Testing About Page has started 
+2022-01-23 20:59:33,627 INFO  [Log] Test called: Testing Blog Page has started 
+2022-01-23 20:59:33,678 INFO  [Log] Test called: Testing Contact Page has started 
+2022-01-23 20:59:33,735 INFO  [Log] Test called: Testing Register Page has started 
+2022-01-23 20:59:36,406 INFO  [Log] Test called: Contact Massage JuaraCoding has started 
+2022-01-23 20:59:36,491 INFO  [Log] Test called: Transaction JuaraCoding has started 
+2022-01-23 20:59:36,555 INFO  [Log] Test called: User JuaraCoding has started 
+2022-01-23 20:59:36,607 INFO  [Log] Test called: Program JuaraCoding has started 
+2022-01-23 20:59:36,667 INFO  [Log] Test called: Gallery JuaraCoding has started 
+2022-01-23 20:59:36,739 INFO  [Log] Test called: Setting JuaraCoding has started 
+2022-01-23 20:59:36,793 INFO  [Log] Test called: Testing Home Page has started 
+2022-01-23 20:59:36,848 INFO  [Log] Test called: Testing Bootcamp Page has started 
+2022-01-23 20:59:36,910 INFO  [Log] Test called: Testing Syllabus Page has started 
+2022-01-23 20:59:36,954 INFO  [Log] Test called: Testing Course Page has started 
+2022-01-23 20:59:37,043 INFO  [Log] Test called: Testing About Page has started 
+2022-01-23 20:59:37,127 INFO  [Log] Test called: Testing Blog Page has started 
+2022-01-23 20:59:37,196 INFO  [Log] Test called: Testing Contact Page has started 
+2022-01-23 20:59:37,267 INFO  [Log] Test called: Testing Register Page has started 
+2022-01-23 21:00:13,624 INFO  [Log] Test called: Form Sign In has started 
+2022-01-23 21:00:18,948 INFO  [Log] INFO: Navigating to https://dev.ptdika.com/juaracodingv1/admin/login 
+2022-01-23 21:00:22,664 INFO  [Log] Test called: Dashboard Web Juara Coding has started 
+2022-01-23 21:00:58,172 INFO  [Log] Test called: Home JuaraCoding has started 
+2022-01-23 21:01:59,063 INFO  [Log] Test called: Learning JuaraCoding has started 
+2022-01-23 21:01:59,118 INFO  [Log] Test called: Blog JuaraCoding has started 
+2022-01-23 21:02:11,605 INFO  [Log] Test called: Contact Massage JuaraCoding has started 
+2022-01-23 21:02:12,684 INFO  [Log] Test called: Transaction JuaraCoding has started 
+2022-01-23 21:02:17,198 INFO  [Log] Test called: User JuaraCoding has started 
+2022-01-23 21:02:37,325 INFO  [Log] Test called: Program JuaraCoding has started 
+2022-01-23 21:02:38,545 INFO  [Log] Test called: Gallery JuaraCoding has started 
+2022-01-23 21:02:40,591 INFO  [Log] Test called: Setting JuaraCoding has started 
+2022-01-23 21:02:42,327 INFO  [Log] Test called: Testing Home Page has started 
+2022-01-23 21:02:43,471 INFO  [Log] Test called: Testing Bootcamp Page has started 
+2022-01-23 21:02:44,673 INFO  [Log] Test called: Testing Syllabus Page has started 
+2022-01-23 21:02:46,077 INFO  [Log] Test called: Testing Course Page has started 
+2022-01-23 21:02:46,813 INFO  [Log] Test called: Testing About Page has started 
+2022-01-23 21:02:48,437 INFO  [Log] Test called: Testing Blog Page has started 
+2022-01-23 21:02:50,432 INFO  [Log] Test called: Testing Contact Page has started 
+2022-01-23 21:05:50,500 INFO  [Log] Test called: Testing Register Page has started 
+2022-01-23 21:06:01,145 INFO  [Log] Test called: Form Sign In has started 
+2022-01-23 21:06:11,161 INFO  [Log] INFO: Navigating to https://dev.ptdika.com/juaracodingv1/admin/login 
+2022-01-23 21:06:15,855 INFO  [Log] Test called: Dashboard Web Juara Coding has started 
+2022-01-23 21:06:54,456 INFO  [Log] Test called: Home JuaraCoding has started 
+2022-01-23 21:07:02,584 INFO  [Log] Test called: Learning JuaraCoding has started 
+2022-01-23 21:07:02,696 INFO  [Log] Test called: Blog JuaraCoding has started 
+2022-01-23 21:07:15,910 INFO  [Log] Test called: Contact Massage JuaraCoding has started 
+2022-01-23 21:07:17,600 INFO  [Log] Test called: Transaction JuaraCoding has started 
+2022-01-23 21:07:22,029 INFO  [Log] Test called: User JuaraCoding has started 
+2022-01-23 21:07:43,699 INFO  [Log] Test called: Program JuaraCoding has started 
+2022-01-23 21:07:45,748 INFO  [Log] Test called: Gallery JuaraCoding has started 
+2022-01-23 21:07:47,457 INFO  [Log] Test called: Setting JuaraCoding has started 
+2022-01-23 21:07:51,422 INFO  [Log] Test called: Testing Home Page has started 
+2022-01-23 21:07:52,534 INFO  [Log] Test called: Testing Bootcamp Page has started 
+2022-01-23 21:07:53,676 INFO  [Log] Test called: Testing Syllabus Page has started 
+2022-01-23 21:07:55,325 INFO  [Log] Test called: Testing Course Page has started 
+2022-01-23 21:07:55,777 INFO  [Log] Test called: Testing About Page has started 
+2022-01-23 21:07:57,843 INFO  [Log] Test called: Testing Blog Page has started 
+2022-01-23 21:08:01,447 INFO  [Log] Test called: Testing Contact Page has started 
+2022-01-23 21:11:01,510 INFO  [Log] Test called: Testing Register Page has started 
+2022-01-24 08:28:45,470 INFO  [Log] Test called: Form Sign In has started 
+2022-01-24 08:28:46,650 INFO  [Log] INFO: Navigating to https://dev.ptdika.com/juaracodingv1/admin/login 
+2022-01-24 08:28:51,050 INFO  [Log] Test called: Dashboard Web Juara Coding has started 
+2022-01-24 08:29:28,846 INFO  [Log] Test called: Home JuaraCoding has started 
+2022-01-24 08:29:39,820 INFO  [Log] Test called: Learning JuaraCoding has started 
+2022-01-24 08:29:40,077 INFO  [Log] Test called: Blog JuaraCoding has started 
+2022-01-24 08:30:14,597 INFO  [Log] Test called: Contact Massage JuaraCoding has started 
+2022-01-24 08:30:15,645 INFO  [Log] Test called: Transaction JuaraCoding has started 
+2022-01-24 08:30:19,070 INFO  [Log] Test called: User JuaraCoding has started 
+2022-01-24 08:30:38,768 INFO  [Log] Test called: Program JuaraCoding has started 
+2022-01-24 08:30:40,092 INFO  [Log] Test called: Gallery JuaraCoding has started 
+2022-01-24 08:30:41,721 INFO  [Log] Test called: Setting JuaraCoding has started 
+2022-01-24 08:30:43,850 INFO  [Log] Test called: Testing Home Page has started 
+2022-01-24 08:30:44,988 INFO  [Log] Test called: Testing Bootcamp Page has started 
+2022-01-24 08:30:46,114 INFO  [Log] Test called: Testing Syllabus Page has started 
+2022-01-24 08:30:47,723 INFO  [Log] Test called: Testing Course Page has started 
+2022-01-24 08:30:48,515 INFO  [Log] Test called: Testing About Page has started 
+2022-01-24 08:30:50,139 INFO  [Log] Test called: Testing Blog Page has started 
+2022-01-24 08:30:52,325 INFO  [Log] Test called: Testing Contact Page has started 
+2022-01-24 08:33:52,405 INFO  [Log] Test called: Testing Register Page has started 
+2022-01-24 09:24:18,085 INFO  [Log] Test called: Form Sign In has started 
+2022-01-24 09:24:19,624 INFO  [Log] INFO: Navigating to https://dev.ptdika.com/juaracodingv1/admin/login 
+2022-01-24 09:24:22,691 INFO  [Log] Test called: Dashboard Web Juara Coding has started 
+2022-01-24 09:24:56,394 INFO  [Log] Test called: Home JuaraCoding has started 
+2022-01-24 09:25:04,733 INFO  [Log] Test called: Learning JuaraCoding has started 
+2022-01-24 09:25:04,840 INFO  [Log] Test called: Blog JuaraCoding has started 
+2022-01-24 09:25:14,147 INFO  [Log] Test called: Contact Massage JuaraCoding has started 
+2022-01-24 09:25:15,611 INFO  [Log] Test called: Transaction JuaraCoding has started 
+2022-01-24 09:25:19,498 INFO  [Log] Test called: User JuaraCoding has started 
+2022-01-24 09:25:37,882 INFO  [Log] Test called: Program JuaraCoding has started 
+2022-01-24 09:25:38,866 INFO  [Log] Test called: Gallery JuaraCoding has started 
+2022-01-24 09:25:40,421 INFO  [Log] Test called: Setting JuaraCoding has started 
+2022-01-24 09:28:43,360 INFO  [Log] Test called: Testing Home Page has started 
+2022-01-24 09:29:02,288 INFO  [Log] Test called: Form Sign In has started 
+2022-01-24 09:29:05,726 INFO  [Log] INFO: Navigating to https://dev.ptdika.com/juaracodingv1/admin/login 
+2022-01-24 09:29:08,420 INFO  [Log] Test called: Dashboard Web Juara Coding has started 
+2022-01-24 09:29:11,022 INFO  [Log] Test called: Home JuaraCoding has started 
+2022-01-24 09:29:11,078 INFO  [Log] Test called: Learning JuaraCoding has started 
+2022-01-24 09:29:11,125 INFO  [Log] Test called: Blog JuaraCoding has started 
+2022-01-24 09:29:11,171 INFO  [Log] Test called: Contact Massage JuaraCoding has started 
+2022-01-24 09:29:11,267 INFO  [Log] Test called: Transaction JuaraCoding has started 
+2022-01-24 09:29:11,312 INFO  [Log] Test called: User JuaraCoding has started 
+2022-01-24 09:29:11,351 INFO  [Log] Test called: Program JuaraCoding has started 
+2022-01-24 09:29:11,490 INFO  [Log] Test called: Gallery JuaraCoding has started 
+2022-01-24 09:29:11,534 INFO  [Log] Test called: Setting JuaraCoding has started 
+2022-01-24 09:29:11,572 INFO  [Log] Test called: Testing Home Page has started 
+2022-01-24 09:29:11,619 INFO  [Log] Test called: Testing Bootcamp Page has started 
+2022-01-24 09:29:11,671 INFO  [Log] Test called: Testing Syllabus Page has started 
+2022-01-24 09:29:11,811 INFO  [Log] Test called: Testing Course Page has started 
+2022-01-24 09:29:11,870 INFO  [Log] Test called: Testing About Page has started 
+2022-01-24 09:29:11,904 INFO  [Log] Test called: Testing Blog Page has started 
+2022-01-24 09:29:11,941 INFO  [Log] Test called: Testing Contact Page has started 
+2022-01-24 09:29:11,976 INFO  [Log] Test called: Testing Register Page has started 
+2022-01-24 09:29:33,179 INFO  [Log] Test called: Form Sign In has started 
+2022-01-24 09:29:36,206 INFO  [Log] INFO: Navigating to https://dev.ptdika.com/juaracodingv1/admin/login 
+2022-01-24 09:29:38,624 INFO  [Log] Test called: Dashboard Web Juara Coding has started 
+2022-01-24 09:30:11,798 INFO  [Log] Test called: Home JuaraCoding has started 
+2022-01-24 09:30:20,201 INFO  [Log] Test called: Learning JuaraCoding has started 
+2022-01-24 09:30:20,290 INFO  [Log] Test called: Blog JuaraCoding has started 
+2022-01-24 09:30:31,520 INFO  [Log] Test called: Contact Massage JuaraCoding has started 
+2022-01-24 09:30:32,867 INFO  [Log] Test called: Transaction JuaraCoding has started 
+2022-01-24 09:30:36,027 INFO  [Log] Test called: User JuaraCoding has started 
+2022-01-24 09:30:54,650 INFO  [Log] Test called: Program JuaraCoding has started 
+2022-01-24 09:30:55,673 INFO  [Log] Test called: Gallery JuaraCoding has started 
+2022-01-24 09:30:57,230 INFO  [Log] Test called: Setting JuaraCoding has started 
+2022-01-24 09:31:27,335 INFO  [Log] Test called: Testing Home Page has started 
+2022-01-24 09:31:43,434 INFO  [Log] Test called: Testing Bootcamp Page has started 
+2022-01-24 09:31:43,516 INFO  [Log] Test called: Testing Bootcamp Page has started 
+2022-01-24 09:31:43,579 INFO  [Log] Test called: Testing Syllabus Page has started 
+2022-01-24 09:31:43,627 INFO  [Log] Test called: Testing Course Page has started 
+2022-01-24 09:31:43,683 INFO  [Log] Test called: Testing About Page has started 
+2022-01-24 09:31:43,852 INFO  [Log] Test called: Testing Blog Page has started 
+2022-01-24 09:31:43,901 INFO  [Log] Test called: Testing Contact Page has started 
+2022-01-24 09:31:43,954 INFO  [Log] Test called: Testing Register Page has started 
+2022-01-24 09:32:01,942 INFO  [Log] Test called: Form Sign In has started 
+2022-01-24 09:32:06,340 INFO  [Log] INFO: Navigating to https://dev.ptdika.com/juaracodingv1/admin/login 
+2022-01-24 09:32:09,662 INFO  [Log] Test called: Dashboard Web Juara Coding has started 
+2022-01-24 09:32:44,460 INFO  [Log] Test called: Home JuaraCoding has started 
+2022-01-24 09:32:53,135 INFO  [Log] Test called: Learning JuaraCoding has started 
+2022-01-24 09:32:53,319 INFO  [Log] Test called: Blog JuaraCoding has started 
+2022-01-24 09:33:05,295 INFO  [Log] Test called: Contact Massage JuaraCoding has started 
+2022-01-24 09:33:06,951 INFO  [Log] Test called: Transaction JuaraCoding has started 
+2022-01-24 09:33:10,839 INFO  [Log] Test called: User JuaraCoding has started 
+2022-01-24 09:33:25,172 INFO  [Log] Test called: Program JuaraCoding has started 
+2022-01-24 09:33:26,939 INFO  [Log] Test called: Gallery JuaraCoding has started 
+2022-01-24 09:33:28,724 INFO  [Log] Test called: Setting JuaraCoding has started 
+2022-01-24 09:33:58,810 INFO  [Log] Test called: Testing Home Page has started 
+2022-01-24 09:34:28,889 INFO  [Log] Test called: Testing Bootcamp Page has started 
+2022-01-24 09:34:43,491 INFO  [Log] Test called: Testing Syllabus Page has started 
+2022-01-24 09:34:58,989 INFO  [Log] Test called: Testing Syllabus Page has started 
+2022-01-24 09:35:29,093 INFO  [Log] Test called: Testing Course Page has started 
+2022-01-24 09:35:30,330 INFO  [Log] Test called: Testing About Page has started 
+2022-01-24 09:35:30,375 INFO  [Log] Test called: Testing Blog Page has started 
+2022-01-24 09:35:30,445 INFO  [Log] Test called: Testing Contact Page has started 
+2022-01-24 09:35:30,497 INFO  [Log] Test called: Testing Register Page has started 
+2022-01-24 09:35:53,019 INFO  [Log] Test called: Form Sign In has started 
+2022-01-24 09:35:54,059 INFO  [Log] INFO: Navigating to https://dev.ptdika.com/juaracodingv1/admin/login 
+2022-01-24 09:35:56,889 INFO  [Log] Test called: Dashboard Web Juara Coding has started 
+2022-01-24 09:36:36,946 INFO  [Log] Test called: Home JuaraCoding has started 
+2022-01-24 09:36:44,034 INFO  [Log] Test called: Learning JuaraCoding has started 
+2022-01-24 09:36:44,576 INFO  [Log] Test called: Blog JuaraCoding has started 
+2022-01-24 09:36:55,594 INFO  [Log] Test called: Contact Massage JuaraCoding has started 
+2022-01-24 09:36:57,163 INFO  [Log] Test called: Transaction JuaraCoding has started 
+2022-01-24 09:37:00,780 INFO  [Log] Test called: User JuaraCoding has started 
+2022-01-24 09:37:19,362 INFO  [Log] Test called: Program JuaraCoding has started 
+2022-01-24 09:37:20,357 INFO  [Log] Test called: Gallery JuaraCoding has started 
+2022-01-24 09:37:21,846 INFO  [Log] Test called: Setting JuaraCoding has started 
+2022-01-24 09:37:43,539 INFO  [Log] Test called: Testing Course Page has started 
+2022-01-24 09:37:52,088 INFO  [Log] Test called: Testing Home Page has started 
+2022-01-24 09:38:22,211 INFO  [Log] Test called: Testing Bootcamp Page has started 
+2022-01-24 09:38:52,258 INFO  [Log] Test called: Testing Syllabus Page has started 
+2022-01-24 09:39:22,328 INFO  [Log] Test called: Testing Course Page has started 
+2022-01-24 09:40:43,614 INFO  [Log] Test called: Testing About Page has started 
+2022-01-24 09:42:22,392 INFO  [Log] Test called: Testing About Page has started 
+2022-01-24 09:43:33,786 INFO  [Log] Test called: Testing Blog Page has started 
+2022-01-24 09:43:43,666 INFO  [Log] Test called: Testing Blog Page has started 
+2022-01-24 09:43:46,027 INFO  [Log] Test called: Testing Contact Page has started 
+2022-01-24 09:43:58,232 INFO  [Log] Test called: Testing Register Page has started 
+2022-01-24 09:44:12,763 INFO  [Log] Test called: Testing Contact Page has started 
+2022-01-24 09:44:24,975 INFO  [Log] Test called: Testing Register Page has started 
