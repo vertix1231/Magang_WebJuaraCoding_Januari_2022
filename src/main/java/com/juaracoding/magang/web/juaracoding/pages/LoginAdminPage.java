@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.juaracoding.magang.web.juaracoding.driver.DriverSingleton;
 
@@ -33,11 +35,16 @@ public class LoginAdminPage {
 	}
 
 	public void loginForm(String username, String password) {
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(txtUserName));
 		txtUserName.sendKeys(username);
+		wait.until(ExpectedConditions.elementToBeClickable(txtPassword));
 		txtPassword.sendKeys(password);
 	}
 	
 	public void clickLogin() {
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(btnLogin));
 		btnLogin.click();
 	}
 }

@@ -129,70 +129,118 @@ public class DashboardAdminPage {
 		WebDriverWait wait = new WebDriverWait(driver, 50);
 
 		// toogle
+		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
 		menu_toogleeBar.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
 		menu_toogleeBar.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
 		menu_toogleeBar.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
 		menu_toogleeBar.click();
 		// galeri
+		wait.until(ExpectedConditions.elementToBeClickable(menu_Gallery));
 		menu_Gallery.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
 		menu_dashboard.click();
 		// HOME JC
+		wait.until(ExpectedConditions.elementToBeClickable(menu_HomeJc));
 		menu_HomeJc.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_HomeTestimonial));
 		menu_HomeTestimonial.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
 		menu_dashboard.click();
 		// LEARNING JC
+		
+		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
 		menu_dashboard.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_LearningJc));
 		menu_LearningJc.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_LearningLms));
 		menu_LearningLms.click();// ini ngaco cuk malah ke halaman awal
+		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
 		menu_dashboard.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_LearningJc));
 		menu_LearningJc.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_LearningBoothcamp));
 		menu_LearningBoothcamp.click();// ini ngaco cuk malah ke halaman awal
+		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
 		menu_dashboard.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_LearningJc));
 		menu_LearningJc.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_LearningClass));
 		menu_LearningClass.click();// ini ngaco cuk malah ke halaman awal
+		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
 		menu_dashboard.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_LearningJc));
 		menu_LearningJc.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_LearningSyllabus));
 		menu_LearningSyllabus.click();// ini ngaco cuk malah ke halaman awal
+		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
 		menu_dashboard.click();
+		
 		// BLOG JC
+		wait.until(ExpectedConditions.elementToBeClickable(menu_Blog));
 		menu_Blog.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
 		menu_dashboard.click();
+		
 		// Contact Massage
+		wait.until(ExpectedConditions.elementToBeClickable(menu_CtcMassage));
 		menu_CtcMassage.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
 		menu_dashboard.click();
+		
 		// Transaction
+		wait.until(ExpectedConditions.elementToBeClickable(menu_Transaction));
 		menu_Transaction.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
 		menu_dashboard.click();
+	
 		// USER
+		wait.until(ExpectedConditions.elementToBeClickable(menu_User));
 		actions.moveToElement(menu_User).perform();
 		menu_User.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_UserBilling));
 		actions.moveToElement(menu_UserBilling).perform();
 		menu_UserBilling.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_User));
 		actions.moveToElement(menu_User).perform();
 		menu_User.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_UserPending));
 		actions.moveToElement(menu_UserPending).perform();
 		menu_UserPending.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_User));
 		actions.moveToElement(menu_User).perform();
 		menu_User.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_UserComplete));
 		actions.moveToElement(menu_UserComplete).perform();
 		menu_UserComplete.click();
+		
 		js.executeScript("arguments[0].scrollIntoView();", menu_User);
+		wait.until(ExpectedConditions.elementToBeClickable(menu_User));
 		actions.moveToElement(menu_User).perform();
 		menu_User.click();
 		js.executeScript("arguments[0].scrollIntoView();", menu_UserClose);
+		wait.until(ExpectedConditions.elementToBeClickable(menu_UserClose));
 		actions.moveToElement(menu_UserClose).perform();
 		menu_UserClose.click();
 		js.executeScript("arguments[0].scrollIntoView();", menu_User);
+		wait.until(ExpectedConditions.elementToBeClickable(menu_User));
 		actions.moveToElement(menu_User).perform();
 		menu_User.click();
 		js.executeScript("arguments[0].scrollIntoView();", menu_Usersubs);
+		wait.until(ExpectedConditions.elementToBeClickable(menu_Usersubs));
 		actions.moveToElement(menu_Usersubs).perform();
 		menu_Usersubs.click();
+		js.executeScript("arguments[0].scrollIntoView();", menu_User);
+		wait.until(ExpectedConditions.elementToBeClickable(menu_User));
 		actions.moveToElement(menu_User).perform();
 		menu_User.click();
+		js.executeScript("arguments[0].scrollIntoView();", menu_UserAccesEmployee);
 		wait.until(ExpectedConditions.elementToBeClickable(menu_UserAccesEmployee));
 		actions.moveToElement(menu_UserAccesEmployee).perform();
 		menu_UserAccesEmployee.click();
+
 //		//PROGRAM
 		wait.until(ExpectedConditions.elementToBeClickable(menu_program));
 		actions.moveToElement(menu_program).perform();
@@ -204,17 +252,21 @@ public class DashboardAdminPage {
 		wait.until(ExpectedConditions.elementToBeClickable(menu_programboothcampbatch));
 		actions.moveToElement(menu_programboothcampbatch).perform();
 		menu_programboothcampbatch.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_program));
+		actions.moveToElement(menu_program).perform();
 		menu_program.click();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_programboothcampharga));
 		actions.moveToElement(menu_programboothcampharga).perform();
 		menu_programboothcampharga.click();
+		
 //		//GALERI
 		js.executeScript("window.scrollBy(0,50)");
 		wait.until(ExpectedConditions.elementToBeClickable(menu_Gallery));
 		actions.moveToElement(menu_Gallery).perform();
 		menu_Gallery.click();
 		// Setting
-		actions.dragAndDrop(listgalery_text, menusidebar_container).build().perform();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
+		actions.moveToElement(menu_toogleeBar).perform();
 		menu_toogleeBar.click();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_Setting));
 		actions.moveToElement(menu_Setting).perform();
@@ -224,6 +276,8 @@ public class DashboardAdminPage {
 		menu_Settingtemplateemail.click();
 
 		// balik ke dashboard karna udah cek semua menu nya
+		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
+		actions.moveToElement(menu_dashboard).perform();
 		menu_dashboard.click();
 
 	}

@@ -75,14 +75,21 @@ public class BlogAdminPage {
 	}
 
 	public void add_item_testimonial() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(menu_Blog));
 		menu_Blog.click();
+		wait.until(ExpectedConditions.elementToBeClickable(addBlogbtn));
 		addBlogbtn.click();
 		uploadBlogBtn.sendKeys("D:/ChromeDriver/eren.jpg");
-		blogtitile.sendKeys("blog coba coba aja60-32");
+		blogtitile.sendKeys("blog coba coba aja60-51");
 //		lsPublishblog(1);
 //		lsSetHomehblog(1);
 		blogcontentpreview.sendKeys("blog bagi orang yang ingin coba coba");
 		blogcontent.sendKeys("detail adadadad dari blog bagi orang yang ingin coba coba");
+		wait.until(ExpectedConditions.elementToBeClickable(submitblogadd));
 		submitblogadd.click();
 	}
 	public void edit_item_testimonial() {
@@ -90,6 +97,7 @@ public class BlogAdminPage {
 		Actions actions = new Actions(driver);
 		WebDriverWait wait = new WebDriverWait(driver, 50);
 	
+		wait.until(ExpectedConditions.elementToBeClickable(menu_Blog));
 		menu_Blog.click();
 		seacrhBlog.sendKeys("blog coba coba aja5");
 		seacrhBlog.sendKeys(Keys.ENTER);
@@ -115,12 +123,12 @@ public class BlogAdminPage {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,1000)");
 
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
 		wait.until(ExpectedConditions.elementToBeClickable(listpublish));
 
 		listpublish.click();
 
-		this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		this.driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 
 		List<Keys> lstSequence = new ArrayList<Keys>();
 		for (int i = 0; i < selection; i++) {
@@ -137,12 +145,12 @@ public class BlogAdminPage {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,1000)");
 
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
 		wait.until(ExpectedConditions.elementToBeClickable(listsethome));
 
 		listsethome.click();
 
-		this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		this.driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 
 		List<Keys> lstSequence = new ArrayList<Keys>();
 		for (int i = 0; i < selection; i++) {

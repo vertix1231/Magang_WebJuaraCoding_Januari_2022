@@ -40,12 +40,13 @@ public class SettingAdminPage {
 		WebDriverWait wait = new WebDriverWait(driver, 50);
 
 		actions.dragAndDrop(listgalery_text, menusidebar_container).build().perform();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
 		menu_toogleeBar.click();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_Setting));
 		actions.moveToElement(menu_Setting).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_Setting));
 		menu_Setting.click();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_Settingtemplateemail));
 		actions.moveToElement(menu_Settingtemplateemail).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_Settingtemplateemail));
 		menu_Settingtemplateemail.click();
 
 	}

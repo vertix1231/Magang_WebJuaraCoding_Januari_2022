@@ -80,6 +80,8 @@ public class ProgramAdminPage {
 		Actions actions = new Actions(driver);
 		WebDriverWait wait = new WebDriverWait(driver, 50);
 
+		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
+		actions.moveToElement(menu_toogleeBar).perform();
 		menu_toogleeBar.click();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_program));
 		actions.moveToElement(menu_program).perform();
@@ -90,6 +92,9 @@ public class ProgramAdminPage {
 	}
 
 	private void save_addprogramBoothcamp() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
 		btnaddprogramboothcamp.click();
 		inputnamaprogramboothcamp.sendKeys("bahasa web jccoding tingkat medium :)");
 		lsprogram(1);
@@ -201,12 +206,12 @@ public class ProgramAdminPage {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,1000)");
 
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
 		wait.until(ExpectedConditions.elementToBeClickable(listnamaprogrambatch));
 
 		listnamaprogrambatch.click();
 
-		this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		this.driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 
 		List<Keys> lstSequence = new ArrayList<Keys>();
 		for (int i = 0; i < selection; i++) {
@@ -222,12 +227,12 @@ public class ProgramAdminPage {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,1000)");
 
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
 		wait.until(ExpectedConditions.elementToBeClickable(listnamaprogrambatch));
 
 		listnamaprogrambatch.click();
 
-		this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		this.driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 
 		List<Keys> lstSequence = new ArrayList<Keys>();
 		for (int i = 0; i < selection; i++) {
@@ -259,12 +264,12 @@ public class ProgramAdminPage {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,1000)");
 
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
 		wait.until(ExpectedConditions.elementToBeClickable(liststatusprogramboothcampitemSelected));
 
 		liststatusprogramboothcampitemSelected.click();
 
-		this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		this.driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 
 		List<Keys> lstSequence = new ArrayList<Keys>();
 		for (int i = 0; i < selection; i++) {

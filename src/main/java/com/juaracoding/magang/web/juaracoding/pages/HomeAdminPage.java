@@ -88,6 +88,11 @@ public class HomeAdminPage {
 //		
 //	}
 	public void edit_item_testimonial() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(cardone));
 		cardone.click();
 		uploadagainEditBtn.sendKeys("D:/ChromeDriver/eren.jpg");
 		editnama.sendKeys("irsyad12345");
@@ -98,15 +103,27 @@ public class HomeAdminPage {
 
 	}
 	public void add_item_testimonial() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(menu_HomeJc));
 		menu_HomeJc.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_HomeTestimonial));
 		menu_HomeTestimonial.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
 		menu_toogleeBar.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
 		menu_toogleeBar.click();
+		wait.until(ExpectedConditions.elementToBeClickable(addTestiBtn));
 		addTestiBtn.click();
 		formAddTesti();
 		
 	}
 	private void formAddTesti() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
 		
 		inputnametesti.sendKeys("irsyad1");
 //		uploadTestPhotoBtn.click();
@@ -114,6 +131,7 @@ public class HomeAdminPage {
 		lsPublish(0);
 		inputMainTesti.sendKeys("cocococococobabababab aja isi testi heheheh");
 		lsRating(5);
+		wait.until(ExpectedConditions.elementToBeClickable(submitedittestiBtn));
 		submittestbtn.click();
 	}
 	
@@ -121,12 +139,12 @@ public class HomeAdminPage {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,1000)");
 
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
 		wait.until(ExpectedConditions.elementToBeClickable(listpublish));
 
 		listpublish.click();
 
-		this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		this.driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 
 		List<Keys> lstSequence = new ArrayList<Keys>();
 		for (int i = 0; i < selection; i++) {
@@ -143,12 +161,12 @@ public class HomeAdminPage {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,1000)");
 
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
 		wait.until(ExpectedConditions.elementToBeClickable(listrating));
 
 		listrating.click();
 
-		this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		this.driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 
 		List<Keys> lstSequence = new ArrayList<Keys>();
 		for (int i = 0; i < selection; i++) {

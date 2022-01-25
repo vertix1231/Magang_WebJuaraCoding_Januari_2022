@@ -42,6 +42,7 @@ public class ContactMassageAdminPage {
 		Actions actions = new Actions(driver);
 		WebDriverWait wait = new WebDriverWait(driver, 50);
 		
+		wait.until(ExpectedConditions.elementToBeClickable(menu_CtcMassage));
 		menu_CtcMassage.click();
 		seacrhContact.sendKeys("Firman Aji");
 		seacrhContact.sendKeys(Keys.ENTER);
@@ -85,12 +86,12 @@ public class ContactMassageAdminPage {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,1000)");
 
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
 		wait.until(ExpectedConditions.elementToBeClickable(listSortContactData));
 
 		listSortContactData.click();
 
-		this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		this.driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 
 		List<Keys> lstSequence = new ArrayList<Keys>();
 		for (int i = 0; i < selection; i++) {

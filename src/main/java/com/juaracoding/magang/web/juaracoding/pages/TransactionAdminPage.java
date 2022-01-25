@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.juaracoding.magang.web.juaracoding.driver.DriverSingleton;
 
@@ -38,14 +40,19 @@ public class TransactionAdminPage {
 	}
 
 	public void ListSearchTransactionData() {
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		wait.until(ExpectedConditions.elementToBeClickable(menu_Transaction));
 		menu_Transaction.click();
 		searchTransaction.sendKeys("P004007");
 		searchTransaction.sendKeys(Keys.ENTER);
+		wait.until(ExpectedConditions.elementToBeClickable(listtrasanctionitemSelected));
 		listtrasanctionitemSelected.click();
 
 	}
 
 	public void detailTransationForVerification() {
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		wait.until(ExpectedConditions.elementToBeClickable(approbeverifivationEditTranssationBtn));
 		approbeverifivationEditTranssationBtn.click();
 	}
 }

@@ -99,13 +99,22 @@ public class UserAdminPage {
 	}
 
 	public void UserBilling() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		
 		// upfront
+		wait.until(ExpectedConditions.elementToBeClickable(menu_User));
 		menu_User.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_UserBilling));
 		menu_UserBilling.click();
+		wait.until(ExpectedConditions.elementToBeClickable(userbillingitemselected));
 		userbillingitemselected.click();
 //		lssortirStatusbilling(1);
 //		lssortirStatusbilling(2);
+		wait.until(ExpectedConditions.elementToBeClickable(userbillingUpfront));
 		userbillingUpfront.click();
+		wait.until(ExpectedConditions.elementToBeClickable(userbillingUpfrontDetailPayperStudent));
 		userbillingUpfrontDetailPayperStudent.click();
 		// isa
 
@@ -134,40 +143,71 @@ public class UserAdminPage {
 	}
 
 	public void UserPending() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(menu_User));
 		menu_User.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_UserPending));
 		menu_UserPending.click();
+		wait.until(ExpectedConditions.elementToBeClickable(userpendingitemselected));
 		userpendingitemselected.click();
 		inputeditformpending();// nanti cek lagi
+		wait.until(ExpectedConditions.elementToBeClickable(btnsimpanedituserpending));
 		btnsimpanedituserpending.click();
+		wait.until(ExpectedConditions.elementToBeClickable(btnpendingbilling));
 		btnpendingbilling.click();
 	}
 
 	private void inputeditformpending() {
-
-	}
-
-	public void Usercomplete() {
-		menu_User.click();
-		menu_UserComplete.click();
-		usercompleteitemselected.click();
-		inputeditformcomplete();// nanti cek lagi
-		btnsimpaneditusercomplete.click();
-		btncompletebilling.click();
-	}
-
-	private void inputeditformcomplete() {
-
-	}
-
-	public void Userclose() {
-		menu_toogleeBar.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		Actions actions = new Actions(driver);
 		WebDriverWait wait = new WebDriverWait(driver, 50);
 
+	}
+
+	public void Usercomplete() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(menu_User));
+		menu_User.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_UserComplete));
+		menu_UserComplete.click();
+		wait.until(ExpectedConditions.elementToBeClickable(usercompleteitemselected));
+		usercompleteitemselected.click();
+		
+		inputeditformcomplete();// nanti cek lagi
+		wait.until(ExpectedConditions.elementToBeClickable(btnsimpaneditusercomplete));
+		btnsimpaneditusercomplete.click();
+		wait.until(ExpectedConditions.elementToBeClickable(btncompletebilling));
+		btncompletebilling.click();
+	}
+
+	private void inputeditformcomplete() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		
+		
+
+	}
+
+	public void Userclose() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
+		menu_toogleeBar.click();
+		
+		wait.until(ExpectedConditions.elementToBeClickable(menu_User));
 		menu_User.click();
 		js.executeScript("arguments[0].scrollIntoView();", menu_UserClose);
 		actions.moveToElement(menu_UserClose).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_UserClose));
 		menu_UserClose.click();
 //		usercloseitemselected.click();
 //		inputeditformclose();// nanti cek lagi
@@ -177,26 +217,40 @@ public class UserAdminPage {
 	}
 
 	private void inputeditformclose() {
-
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		
 	}
 
 	public void Usersubscribe() {
-		menu_toogleeBar.click();
+		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		Actions actions = new Actions(driver);
 		WebDriverWait wait = new WebDriverWait(driver, 50);
 
+		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
+		menu_toogleeBar.click();
+		
+		wait.until(ExpectedConditions.elementToBeClickable(menu_User));
 		menu_User.click();
 		js.executeScript("arguments[0].scrollIntoView();", menu_Usersubs);
 		actions.moveToElement(menu_Usersubs).perform();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_Usersubs));
 		menu_Usersubs.click();
 		sendEmailSubs();
 	}
 
 	private void sendEmailSubs() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(btnsendemailsubs));
 		btnsendemailsubs.click();
 //		lstoSendSubs(1);
 //		lstemplatesubs(1);
+		wait.until(ExpectedConditions.elementToBeClickable(btnsaveEmailSendSubs));
 		btnsaveEmailSendSubs.click();
 
 	}
@@ -246,19 +300,31 @@ public class UserAdminPage {
 	}
 
 	public void Useraccess() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
 		menu_toogleeBar.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_User));
 		menu_User.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_UserAccesEmployee));
 		menu_UserAccesEmployee.click();
+		
 		saveAccess();
 
 	}
 	
 	private void saveAccess() {
-		WebDriverWait wait = new WebDriverWait(driver,30);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
 		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(userAccesSelectededititem));
 		userAccesSelectededititem.click();
 		js.executeScript("arguments[0].scrollIntoView();", btnsaveuserAccesSelectededititem);
+		wait.until(ExpectedConditions.elementToBeClickable(btnsaveuserAccesSelectededititem));
 		btnsaveuserAccesSelectededititem.click();
 	}
 }
