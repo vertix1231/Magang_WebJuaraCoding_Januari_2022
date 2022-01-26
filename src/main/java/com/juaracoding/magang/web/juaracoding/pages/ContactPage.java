@@ -3,10 +3,14 @@ package com.juaracoding.magang.web.juaracoding.pages;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.juaracoding.magang.web.juaracoding.driver.DriverSingleton;
 
@@ -25,7 +29,15 @@ public class ContactPage {
 	private List<WebElement> menuContact;
 	
 	public void pageContact() {
-		driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		menuContact.get(4).click();
 	}
 	
@@ -45,7 +57,9 @@ public class ContactPage {
 	private WebElement formMessage;
 	
 	public void formContact(String name, String email, String phone, String subject, String message) {
-		driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
 		formFullName.sendKeys(name);
 		formEmail.sendKeys(email);
 		formPhone.sendKeys(phone);
@@ -57,7 +71,10 @@ public class ContactPage {
 	private WebElement btnSend;
 	
 	public void sendMessage() {
-		driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		wait.until(ExpectedConditions.elementToBeClickable(btnSend));
 		btnSend.click();
 	}
 	

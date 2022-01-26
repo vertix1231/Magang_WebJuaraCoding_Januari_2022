@@ -3,8 +3,10 @@ package com.juaracoding.magang.web.juaracoding.pages;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -26,7 +28,15 @@ public class AboutPage {
 	private List<WebElement> about;
 	
 	public void clickAbout() {
-		driver.manage().timeouts().implicitlyWait(7000, TimeUnit.SECONDS);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		about.get(2).click();
 	}
 	

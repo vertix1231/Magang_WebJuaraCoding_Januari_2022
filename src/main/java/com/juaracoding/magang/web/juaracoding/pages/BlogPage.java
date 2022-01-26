@@ -3,10 +3,14 @@ package com.juaracoding.magang.web.juaracoding.pages;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.juaracoding.magang.web.juaracoding.driver.DriverSingleton;
 
@@ -31,17 +35,31 @@ private WebDriver driver;
 	private WebElement detailBlog;
 	
 	public void menuBlog() {
-		driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		blog.get(3).click();
 	}
 	
 	public void clickPageNumb() {
-		driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		wait.until(ExpectedConditions.elementToBeClickable(pageNumb));
 		pageNumb.click();
 	}
 	
 	public void chooseBlog() {
-		driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		wait.until(ExpectedConditions.elementToBeClickable(detailBlog));
 		detailBlog.click();
 	}
 	

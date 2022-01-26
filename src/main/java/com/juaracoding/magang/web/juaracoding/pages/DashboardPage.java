@@ -55,7 +55,7 @@ public class DashboardPage {
 		Actions actions = new Actions(driver);
 		WebDriverWait wait = new WebDriverWait(driver, 50);
 		
-		driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+		wait.until(ExpectedConditions.elementToBeClickable(subscribe));
 		txtEmail.sendKeys(email);
 		subscribe.click();
 	}

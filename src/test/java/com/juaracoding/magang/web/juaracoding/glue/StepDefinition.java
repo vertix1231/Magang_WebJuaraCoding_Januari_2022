@@ -829,12 +829,6 @@ public class StepDefinition {
 		}
 	}
 
-	// Bucket Page
-//		@Then("^User tekan button pay")
-//		public void User_tekan_button_pay() {
-//			bucket.pay();
-//			extentTest.log(LogStatus.PASS, "User tekan button pay");
-//		}
 
 //AKHIR TESTSTING USER WEB JCODING-------------------------------------------------------------------------------------------------------------------
 

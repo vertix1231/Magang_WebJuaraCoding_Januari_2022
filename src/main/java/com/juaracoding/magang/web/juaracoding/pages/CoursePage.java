@@ -3,10 +3,14 @@ package com.juaracoding.magang.web.juaracoding.pages;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.juaracoding.magang.web.juaracoding.driver.DriverSingleton;
 
@@ -42,7 +46,10 @@ public class CoursePage {
 	private WebElement lstCourse;
 	
 	public void listCourse() {
-		driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		wait.until(ExpectedConditions.elementToBeClickable(lstCourse));
 		lstCourse.click();
 	}
 
@@ -50,7 +57,6 @@ public class CoursePage {
 	private WebElement txtSearch;
 	
 	public void searchCourses(String course) {
-		driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
 		txtSearch.sendKeys(course);
 	}
 	
@@ -58,7 +64,10 @@ public class CoursePage {
 	private WebElement btnSearch;
 	
 	public void clickSearch() {
-		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		wait.until(ExpectedConditions.elementToBeClickable(btnSearch));
 		btnSearch.click();
 	}
 	
