@@ -84,7 +84,7 @@ public class BlogAdminPage {
 		wait.until(ExpectedConditions.elementToBeClickable(addBlogbtn));
 		addBlogbtn.click();
 		uploadBlogBtn.sendKeys("D:/ChromeDriver/eren.jpg");
-		blogtitile.sendKeys("blog coba coba aja60-52");
+		blogtitile.sendKeys("blog coba coba aja60-56");
 //		lsPublishblog(1);
 //		lsSetHomehblog(1);
 		blogcontentpreview.sendKeys("blog bagi orang yang ingin coba coba");
