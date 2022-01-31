@@ -37,6 +37,9 @@ public class ContactMassageAdminPage {
 	@FindBy(css = "#pageWrapper > div.page-body-wrapper > div.page-body > div > div:nth-child(2) > div > div > div > div:nth-child(3) > nav > ul  > li")
 	private List<WebElement> pageContactList;
 
+	public void pageContactMassage() {
+		System.out.println("berhasil contact massage");
+	}
 	public void contactDataMassage() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		Actions actions = new Actions(driver);

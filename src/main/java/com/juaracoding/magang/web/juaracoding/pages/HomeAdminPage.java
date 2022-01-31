@@ -37,7 +37,7 @@ public class HomeAdminPage {
 	private WebElement menu_HomeTestimonial;
 	@FindBy(css="#pageWrapper > div.page-body-wrapper > div.page-body > div:nth-child(3) > div > div > div > div.my-gallery.card-body.row.gallery-with-description")
 	private List<WebElement> card_testi_item;
-	
+	               
 	@FindBy(css = "#pageWrapper > div.page-body-wrapper > div.page-body > div:nth-child(3) > div > div > div > div.my-gallery.card-body.row.gallery-with-description > figure:nth-child(10) > a")
 	private WebElement cardone;
 	
@@ -83,10 +83,26 @@ public class HomeAdminPage {
 	
 	@FindBy(css="#pageWrapper > div.page-body-wrapper > div.page-body > div:nth-child(2) > div > div > div > form > div.card-footer.text-end > input")
 	private WebElement submitedittestiBtn;
+	
+	
+	//search testimonial
+	@FindBy(css="#pageWrapper > div.page-body-wrapper > div.page-body > div:nth-child(3) > div > div > div > div.faq-form > form > input")
+	private WebElement search_testimonial;
+	
+	//page
+	@FindBy(css="#pageWrapper > div.page-body-wrapper > div.page-body > div:nth-child(3) > div > div > div > div.my-gallery.card-body.row.gallery-with-description > div > nav > ul > li > a")
+	private WebElement page_testi;
 
 //	private void editimg() {
 //		
 //	}
+	public void search_testimonial_item() {
+		search_testimonial.sendKeys("Ahmad Saifur");
+		
+	}
+	public void perPage_testimonial() {
+		page_testi.click();
+	}
 	public void edit_item_testimonial() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		Actions actions = new Actions(driver);

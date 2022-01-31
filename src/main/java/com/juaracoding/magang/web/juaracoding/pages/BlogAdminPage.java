@@ -63,7 +63,9 @@ public class BlogAdminPage {
 	private WebElement blogeditcontent;
 	@FindBy(css="#pageWrapper > div.page-body-wrapper > div.page-body > div:nth-child(2) > div > div > div > form > div.card-footer.text-end > input")
 	private WebElement submitblogedit;
-
+	@FindBy(css="#pageWrapper > div.page-body-wrapper > div.page-body > div:nth-child(3) > div > div > div > div.my-gallery.card-body.row.gallery-with-description > div > nav > ul > li:nth-child(2) > a")
+	private WebElement perPage_blog;
+	
 
 	
 	public WebElement getPostblogSuccesElement() {
@@ -74,8 +76,15 @@ public class BlogAdminPage {
 		return postblogSucces.getText();
 	}
 
+	public void pageBlog() {
+		perPage_blog.click();
+	}
+	public void search_item_blog() {
+		seacrhBlog.sendKeys("Apa itu Javascript?");
+	}
 	public void add_item_testimonial() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
+		@SuppressWarnings("unused")
 		Actions actions = new Actions(driver);
 		WebDriverWait wait = new WebDriverWait(driver, 50);
 		
@@ -84,7 +93,7 @@ public class BlogAdminPage {
 		wait.until(ExpectedConditions.elementToBeClickable(addBlogbtn));
 		addBlogbtn.click();
 		uploadBlogBtn.sendKeys("D:/ChromeDriver/eren.jpg");
-		blogtitile.sendKeys("blog coba coba aja60-56");
+		blogtitile.sendKeys("blog coba coba aja80-71");
 //		lsPublishblog(1);
 //		lsSetHomehblog(1);
 		blogcontentpreview.sendKeys("blog bagi orang yang ingin coba coba");

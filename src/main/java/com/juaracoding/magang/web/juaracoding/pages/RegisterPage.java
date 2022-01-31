@@ -36,7 +36,7 @@ public class RegisterPage {
 	}
 	
 	//Form Registrasi
-	@FindBy(css = "#id_program > option:nth-child(11)")
+	@FindBy(css = "#id_program > option:nth-child(2)")
 	private WebElement lstProgram;
 	
 	@FindBy(css = "#id_batch > option:nth-child(2)")

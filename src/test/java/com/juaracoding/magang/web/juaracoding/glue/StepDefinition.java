@@ -81,7 +81,8 @@ public class StepDefinition {
 	private RegisterPage regist;
 	private ExtentTest extentTest;
 	static ExtentReports extentReports = new ExtentReports();
-	static ExtentSparkReporter htmlreporter = new ExtentSparkReporter("src/main/resources/reporttest_Magang_WebJCCODING.html");
+	static ExtentSparkReporter htmlreporter = new ExtentSparkReporter(
+			"src/main/resources/reporttest_Magang_WebJCCODING.html");
 
 //start WEB JCODING---------------------------------------------------------------------------------------------------------------------
 
@@ -106,9 +107,9 @@ public class StepDefinition {
 		dashboard = new DashboardPage();
 		about = new AboutPage();
 //		learning = new LearningPage();
-	    bootcamp = new BootcampPage();
-	    syllabus = new SyllabusPage();
-	    course = new CoursePage();
+		bootcamp = new BootcampPage();
+		syllabus = new SyllabusPage();
+		course = new CoursePage();
 		blog = new BlogPage();
 		contact = new ContactPage();
 		regist = new RegisterPage();
@@ -150,7 +151,8 @@ public class StepDefinition {
 			System.out.println("scenario User klik button Login fail");
 			extentTest.log(Status.FAIL, "User klik button Login");
 			try {
-				extentTest.fail( "User klik button Login", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("User klik button Login",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -159,11 +161,67 @@ public class StepDefinition {
 	}
 
 //2---------------------------------------------------------------------------------------------------------------------	
-	@When("^Menampilkan List tiap menu dan pengecekan kerja tiap menu di sidebar")
-	public void checkAllSidebarMenu() {
-		dashboardAdminPage.checkSidebarElement();
+	@When("^cek home admin")
+	public void checkhome() {
+		dashboardAdminPage.home();
+		System.out.println("scenario cek home admin passed");
+		extentTest.log(Status.PASS, "cek home admin");
+	}
+
+	@When("^cek learning admin")
+	public void learning() {
+		dashboardAdminPage.learning();
+		System.out.println("scenario cek learning admin passed");
+		extentTest.log(Status.PASS, "cek learning admin");
+	}
+
+	@When("^cek blog admin")
+	public void checkblog() {
+		dashboardAdminPage.blog();
+		System.out.println("scenario cek blog admin passed");
+		extentTest.log(Status.PASS, "cek blog admin");
+	}
+
+	@When("^cek contact massage admin")
+	public void checkcontact() {
+		dashboardAdminPage.contactmasg();
+		System.out.println("scenario cek contact massage admin passed");
+		extentTest.log(Status.PASS, "cek contact massage admin");
+	}
+
+	@When("^cek transaction admin")
+	public void checktransaction() {
+		dashboardAdminPage.transaction();
+		System.out.println("scenario cek transaction admin passed");
+		extentTest.log(Status.PASS, "cek transaction admin");
+	}
+
+	@When("^cek user admin")
+	public void user() {
+		dashboardAdminPage.user();
 		System.out.println("scenario Menampilkan List tiap menu dan pengecekan kerja tiap menu di sidebar passed");
 		extentTest.log(Status.PASS, "Menampilkan List tiap menu dan pengecekan kerja tiap menu di sidebar");
+	}
+
+	@When("^cek program admin")
+	public void checkprogram() {
+		dashboardAdminPage.program();
+		System.out.println("scenario cek program admin passed");
+		extentTest.log(Status.PASS, "cek program admin");
+	}
+
+	@When("^cek galeri admin")
+	public void checkgaleri() {
+		dashboardAdminPage.galeri();
+		System.out.println("scenario cek galeri admin passed");
+		extentTest.log(Status.PASS, "cek galeri admin");
+	}
+
+	@When("^cek setting admin")
+	public void checkAllSidebarMenu() {
+		dashboardAdminPage.setting();
+		System.out.println("scenario cek setting admin passed");
+		extentTest.log(Status.PASS, "cek setting admin");
 	}
 
 	@Then("^Berhasil pengecekan dashboard balik ke halaman dashboard")
@@ -175,7 +233,8 @@ public class StepDefinition {
 			System.out.println("scenario Berhasil pengecekan dashboard balik ke halaman dashboard fail");
 			extentTest.log(Status.FAIL, "Berhasil pengecekan dashboard balik ke halaman dashboard");
 			try {
-				extentTest.fail( "Berhasil pengecekan dashboard balik ke halaman dashboard", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("Berhasil pengecekan dashboard balik ke halaman dashboard",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -191,29 +250,64 @@ public class StepDefinition {
 				"scenario Menuju form untuk menambah data profile testimonial lalu submit pertambahan tertambah di halaman awal Home passed");
 		extentTest.log(Status.PASS,
 				"Menuju form untuk menambah data profile testimonial lalu submit pertambahan tertambah di halaman awal Home");
+		System.out.println("Mengisi data form Testimonial");
+		extentTest.log(Status.PASS, "Mengisi data form Testimonial");
+	}
+
+	@And("^Mengisi data form Testimonial")
+	public void Hometwo() {
+		System.out.println("Mengisi data form Testimonial");
+		extentTest.log(Status.PASS, "Mengisi data form Testimonial");
 	}
 
 	@And("^Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir")
-	public void Hometwo() {
+	public void Homethree() {
 		homeAdminPage.edit_item_testimonial();
-//		homePage.edit_item_testimonial();
 		System.out.println(
 				"scenario Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir passed");
 		extentTest.log(Status.PASS,
 				"Menuju form untuk mengubah data profile item testimonial lalu submit perubahan dari hasil search sortir");
+		System.out.println("scenario Mengisi data form yang mau di ubah lalu simpan passed");
+		extentTest.log(Status.PASS, "Mengisi data form yang mau di ubah lalu simpan");
+
+	}
+
+	@And("^Mengisi data form yang mau di ubah lalu simpan")
+	public void Homefour() {
+
+		System.out.println("scenario Mengisi data form yang mau di ubah lalu simpan passed");
+		extentTest.log(Status.PASS, "Mengisi data form yang mau di ubah lalu simpan");
+
+	}
+
+	@And("^Mencari data item testimonial dengan search")
+	public void Homefive() {
+		homeAdminPage.search_testimonial_item();
+		System.out.println("scenario Mencari data item testimonial dengan search passed");
+		extentTest.log(Status.PASS, "Mencari data item testimonial dengan search");
+
+	}
+
+	@And("^Halaman data testimonial")
+	public void Homesix() {
+
+		System.out.println("scenario Halaman data testimonial passed");
+		extentTest.log(Status.PASS, "Halaman data testimonial");
+
 	}
 
 	@Then("^Berhasil pengecekan menu home")
-	public void Homethree() {
+	public void Homeseven() {
 		if (Status.PASS != null) {
 			System.out.println("scenario Berhasil pengecekan menu home passed");
 			extentTest.log(Status.PASS, "Berhasil pengecekan menu home");
-			
+
 		} else {
 			System.out.println("scenario Berhasil pengecekan menu home fail");
 			extentTest.log(Status.FAIL, "Berhasil pengecekan menu home");
 			try {
-				extentTest.fail( "Berhasil pengecekan menu home", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("Berhasil pengecekan menu home",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -222,23 +316,43 @@ public class StepDefinition {
 	}
 
 //4---------------------------------------------------------------------------------------------------------------------
-	@When("^Menuju halaman LMS,Menuju halaman Bootcamp,Menuju halaman Class,Menuju halaman Syllabus")
+	@When("^Menuju halaman LMS")
 	public void Learnone() {
 
-		System.out.println(
-				"scenario Menuju halaman LMS,Menuju halaman Bootcamp,Menuju halaman Class,Menuju halaman Syllabus passed");
-		extentTest.log(Status.FAIL,
-				"Menuju halaman LMS,Menuju halaman Bootcamp,Menuju halaman Class,Menuju halaman Syllabus");
+		System.out.println("scenario Menuju halaman LMS passed");
+		extentTest.log(Status.FAIL, "Menuju halaman LMS");
+
+	}
+
+	@And("^Menuju halaman Bootcamp")
+	public void Learntwo() {
+		System.out.println("scenario Menuju halaman LMS passed");
+		extentTest.log(Status.FAIL, "Menuju halaman LMS");
+
+	}
+
+	@And("^Menuju halaman Class")
+	public void Learnthree() {
+		System.out.println("scenario Menuju halaman Class passed");
+		extentTest.log(Status.FAIL, "Menuju halaman Class");
+
+	}
+
+	@And("^Menuju halaman Syllabus")
+	public void Learnfour() {
+		System.out.println("scenario Menuju halaman Syllabus passed");
+		extentTest.log(Status.FAIL, "Menuju halaman Syllabus");
 	}
 
 	@Then("^Berhasil pengecekan Learning admin juara coding")
-	public void Learntwo() {
+	public void Learnfive() {
 
 		if (Status.PASS != null) {
 			System.out.println("scenario Berhasil pengecekan Learning admin juara coding passed");
 			extentTest.log(Status.FAIL, "Berhasil pengecekan Learning admin juara coding");
 			try {
-				extentTest.fail( "Berhasil pengecekan Learning admin juara coding", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("Berhasil pengecekan Learning admin juara coding",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -247,7 +361,8 @@ public class StepDefinition {
 			System.out.println("scenario Berhasil pengecekan Learning admin juara coding fail");
 			extentTest.log(Status.FAIL, "Berhasil pengecekan Learning admin juara coding");
 			try {
-				extentTest.fail( "Berhasil pengecekan Learning admin juara coding", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("Berhasil pengecekan Learning admin juara coding",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -264,20 +379,58 @@ public class StepDefinition {
 				"scenario Menuju form untuk menambah data post blog lalu submit pertambahan tertambah di halaman awal Home passed");
 		extentTest.log(Status.PASS,
 				"Menuju form untuk menambah data post blog lalu submit pertambahan tertambah di halaman awal Home");
+		System.out.println("scenario Mengisi data form blog passed");
+		extentTest.log(Status.PASS, "Mengisi data form blog");
+
+	}
+
+	@And("^Mengisi data form blog")
+	public void Blogtwo() {
+		System.out.println("scenario Mengisi data form yang mau di ubah lalu simpan passed");
+		extentTest.log(Status.PASS, "Mengisi data form yang mau di ubah lalu simpan");
+
 	}
 
 	@And("^Menuju form untuk mengubah data post blog item lalu submit perubahan dari hasil search sortir")
-	public void Blogtwo() {
+	public void Blogthree() {
 		blogAdminPage.edit_item_testimonial();
-//		homePage.edit_item_testimonial();
+
 		System.out.println(
 				"scenario Menuju form untuk mengubah data post blog item lalu submit perubahan dari hasil search sortir passed");
 		extentTest.log(Status.PASS,
 				"Menuju form untuk mengubah data post blog item lalu submit perubahan dari hasil search sortir");
+		System.out.println("scenario Mengisi data form yang mau di ubah lalu simpan passed");
+		extentTest.log(Status.PASS, "Mengisi data form yang mau di ubah lalu simpan");
+
+	}
+
+	@And("^Mengisi data form yang mau di ubah lalu simpann")
+	public void Blogfour() {
+
+		System.out.println("scenario Mengisi data form yang mau di ubah lalu simpan passed");
+		extentTest.log(Status.PASS, "Mengisi data form yang mau di ubah lalu simpan");
+
+	}
+
+	@And("^Mencari data blog")
+	public void Blogfive() {
+		blogAdminPage.search_item_blog();
+
+		System.out.println("scenario Mencari data blog passed");
+		extentTest.log(Status.PASS, "Mencari data blog");
+
+	}
+
+	@And("^Halaman data blog")
+	public void Blogsix() {
+
+		System.out.println("scenario Halaman data blog passed");
+		extentTest.log(Status.PASS, "Halaman data blog");
+
 	}
 
 	@Then("^Berhasil pengecekan menu blog")
-	public void Blogthree() {
+	public void Blogseven() {
 
 		if (Status.PASS != null) {
 			System.out.println("scenario Berhasil pengecekan menu blog passed");
@@ -286,7 +439,8 @@ public class StepDefinition {
 			System.out.println("scenario Berhasil pengecekan menu blog fail");
 			extentTest.log(Status.FAIL, "Berhasil pengecekan menu blog");
 			try {
-				extentTest.fail( "Berhasil pengecekan menu blog", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("Berhasil pengecekan menu blog",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -305,8 +459,17 @@ public class StepDefinition {
 
 	}
 
-	@Then("^Berhasil pengecekan menu Contact Massage")
+	@When("^Halaman data contact message")
 	public void Contacttwo() {
+		contactMassageAdminPage.pageContactMassage();
+
+		System.out.println("scenario Halaman data contact message passed");
+		extentTest.log(Status.PASS, "Halaman data contact message");
+
+	}
+
+	@Then("^Berhasil pengecekan menu Contact Massage")
+	public void Contactthree() {
 		if (Status.PASS != null) {
 			System.out.println("scenario Berhasil pengecekan menu Contact Massage passed");
 			extentTest.log(Status.PASS, "Berhasil pengecekan menu Contact Massage");
@@ -314,7 +477,8 @@ public class StepDefinition {
 			System.out.println("scenario Berhasil pengecekan menu Contact Massage fail");
 			extentTest.log(Status.FAIL, "Berhasil pengecekan menu Contact Massage");
 			try {
-				extentTest.fail( "Berhasil pengecekan menu Contact Massage", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("Berhasil pengecekan menu Contact Massage",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -333,9 +497,17 @@ public class StepDefinition {
 
 	}
 
-	@And("^tombol aksi item tabel menuju form konfirasi transaksi dari peserta menu user dengan klil tombol approve")
+	@And("^Sorting data berdasarkan kategori yang ada")
 	public void Transactiontwo() {
-		transactionAdminPage.detailTransationForVerification();
+
+		System.out.println("scenario Sorting data berdasarkan kategori yang ada passed");
+		extentTest.log(Status.PASS, "Sorting data berdasarkan kategori yang ada");
+
+	}
+
+	@And("^tombol aksi item tabel menuju form konfirasi transaksi dari peserta menu user dengan klil tombol approve")
+	public void Transactionthree() {
+
 		System.out.println(
 				"scenario tombol aksi item tabel menuju form konfirasi transaksi dari peserta menu user dengan klil tombol approve passed");
 		extentTest.log(Status.PASS,
@@ -343,8 +515,25 @@ public class StepDefinition {
 
 	}
 
-	@Then("^Berhasil pengecekan menu Transaction hasil di tabel user billing")
+	@And("^Approve transaction ke user billing")
 	public void Transactionfour() {
+		transactionAdminPage.detailTransationForVerification();
+		System.out.println("scenario Approve transaction ke user billing passed");
+		extentTest.log(Status.PASS, "Approve transaction ke user billing");
+
+	}
+
+	@And("^Halaman data tabel transaksi")
+	public void Transactionfive() {
+		transactionAdminPage.trasactioninitpage();
+		transactionAdminPage.pageTransation();
+		System.out.println("scenario Halaman data tabel transaksi passed");
+		extentTest.log(Status.PASS, "Halaman data tabel transaksi");
+
+	}
+
+	@Then("^Berhasil pengecekan menu Transaction hasil di tabel user billing")
+	public void Transactionsix() {
 		if (Status.PASS != null) {
 			System.out.println("scenario Berhasil pengecekan menu Transaction passed");
 			extentTest.log(Status.PASS, "Berhasil pengecekan menu Transaction");
@@ -353,7 +542,8 @@ public class StepDefinition {
 			System.out.println("scenario Berhasil pengecekan menu Transaction fail");
 			extentTest.log(Status.FAIL, "Berhasil pengecekan menu Transaction");
 			try {
-				extentTest.fail( "Berhasil pengecekan menu Transaction hasil di tabel user billing", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("Berhasil pengecekan menu Transaction hasil di tabel user billing",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -417,7 +607,8 @@ public class StepDefinition {
 			System.out.println("scenario Berhasil pengecekan menu Transaction fail");
 			extentTest.log(Status.FAIL, "Berhasil pengecekan menu Transaction");
 			try {
-				extentTest.fail( "Berhasil pengecekan menu User", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("Berhasil pengecekan menu User",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -427,29 +618,66 @@ public class StepDefinition {
 	}
 
 //9---------------------------------------------------------------------------------------------------------------------			
-	@When("^tabel program boothcamp edit/tambah/hapus")
+	@When("^tabel program boothcamp edit/tambah/hapus  berdasarkan sort status")
 	public void Programone() {
-		programAdminPage.programBoothcamp();
+		programAdminPage.addprogramBoothcamp();
 		System.out.println("scenario tabel program boothcamp edit/tambah/hapus passed");
 		extentTest.log(Status.PASS, "tabel program boothcamp edit/tambah/hapus");
 	}
-
-	@And("^tabel program boothcamp batch angkatan per periode edit/tambah/hapus")
+	@And("^Halaman awal boothcamp ke halaman tambah data boothcamp")
 	public void Programtwo() {
-//		programAdminPage.programBoothcampBatch();
-		System.out.println("scenario tabel program boothcamp batch angkatan per periode edit/tambah/hapus passed");
-		extentTest.log(Status.PASS, "tabel program boothcamp batch angkatan per periode edit/tambah/hapus");
+		programAdminPage.initpageprogramBoothcamp();
+		System.out.println("scenario Halaman awal boothcamp ke halaman tambah data boothcamp passed");
+		extentTest.log(Status.PASS, "Halaman awal boothcamp ke halaman tambah data boothcamp");
 	}
-
-	@And("^tabel program harga boothcamp  edit/tambah/hapus")
+	@And("^input data tambah program boothcamp dan simpan data")
 	public void Programthree() {
-//		programAdminPage.programBoothcampPrice();
-		System.out.println("scenario tabel program harga boothcamp  edit/tambah/hapus passed");
-		extentTest.log(Status.PASS, "tabel program harga boothcamp  edit/tambah/hapus");
+		programAdminPage.initsearchbasePage();
+		System.out.println("scenario input data tambah program boothcamp dan simpan data passed");
+		extentTest.log(Status.PASS, "input data tambah program boothcamp dan simpan data");
 	}
-
-	@Then("^Berhasil pengecekan menu program")
+	@And("^kembali ke halaman awal  program boothcamp melalui menu side bar program boothcamp")
+	public void Programfour() {
+		programAdminPage.initpageprogramBoothcamp();
+		System.out.println("scenario kembali ke halaman awal  program boothcamp melalui menu side bar program boothcamp passed");
+		extentTest.log(Status.PASS, "kembali ke halaman awal  program boothcamp melalui menu side bar program boothcamp");
+	}
+	@And("^search tabel berdasarkan nama lengkap berdasarkan drop down menu")
+	public void Programfive() {
+		programAdminPage.searchprogramBoothcamp();;
+		System.out.println("scenario search tabel berdasarkan nama lengkap berdasarkan drop down menu passed");
+		extentTest.log(Status.PASS, "search tabel berdasarkan nama lengkap berdasarkan drop down menu");
+	}
+	@And("^menu pengelompokan data berdasarkan semua drop down menu untuk fitur search")
+	public void Programsix() {
+		System.out.println("scenario menu pengelompokan data berdasarkan menu untuk fitur search passed");
+		extentTest.log(Status.PASS, "menu pengelompokan data berdasarkan menu untuk fitur search");
+	}
+	@And("^Halaman data program bootcamp")
 	public void Programseven() {
+		System.out.println("scenario Halaman data program bootcamp passed");
+		extentTest.log(Status.PASS, "Halaman data program bootcamp");
+	}
+	@And("^Halaman awal boothcamp ke halaman edit form data boothcamp")
+	public void Programeight() {
+		System.out.println("scenario Halaman awal boothcamp ke halaman edit form data boothcamp passed");
+		extentTest.log(Status.PASS, "Halaman awal boothcamp ke halaman edit form data boothcamp");
+	}
+	@And("^input data perubahan nama dan status program bootcamp")
+	public void Programnine() {
+		System.out.println("scenario input data perubahan nama dan status program bootcamp passed");
+		extentTest.log(Status.PASS, "input data perubahan nama dan status program bootcamp");
+	}
+	@And("^kembali ke halaman awal  program boothcamp melalui menu side bar program boothcamp dari perubahan data")
+	public void Programten() {
+//		programAdminPage.initpageprogramBoothcamp();
+		System.out.println("scenario kembali ke halaman awal  program boothcamp melalui menu side bar program boothcamp passed");
+		extentTest.log(Status.PASS, "kembali ke halaman awal  program boothcamp melalui menu side bar program boothcamp");
+	}
+	
+
+	@Then("^Berhasil pengecekan menu program boothcamp")
+	public void Programeleven() {
 		if (Status.PASS != null) {
 			System.out.println("scenario Berhasil pengecekan menu program passed");
 			extentTest.log(Status.PASS, "Berhasil pengecekan menu program");
@@ -458,7 +686,8 @@ public class StepDefinition {
 			System.out.println("scenario Berhasil pengecekan menu program fail");
 			extentTest.log(Status.FAIL, "Berhasil pengecekan menu program");
 			try {
-				extentTest.fail( "Berhasil pengecekan menu program", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("Berhasil pengecekan menu program",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -466,11 +695,150 @@ public class StepDefinition {
 
 		}
 	}
+	//program batch
+	@When("^tabel program boothcamp batch angkatan per periode edit/tambah/hapus")
+	public void Programtwelve() {
+		programAdminPage.initpageprogramBoothcampbatch();
+		programAdminPage.addprogramBoothcampbatch();
+		System.out.println("scenario tabel program boothcamp batch angkatan per periode edit/tambah/hapus  passed");
+		extentTest.log(Status.PASS, "tabel program boothcamp batch angkatan per periode edit/tambah/hapus ");
+	}
+	@And("^Halaman awal boothcamp batch ke halaman tambah data boothcamp batch")
+	public void Programthirteen() {
+		programAdminPage.initpageprogramBoothcampbatch();
+		System.out.println("scenario Halaman awal boothcamp batch ke halaman tambah data boothcamp batch passed");
+		extentTest.log(Status.PASS, "Halaman awal boothcamp batch ke halaman tambah data boothcamp batch");
+	}
+	@And("^input data tambah program boothcamp  batch dan simpan data")
+	public void Programfourteen() {
+		programAdminPage.initsearchbasePagebatch();
+		System.out.println("scenario input data tambah program boothcamp  batch dan simpan data passed");
+		extentTest.log(Status.PASS, "input data tambah program boothcamp  batch dan simpan data");
+	}
+	@And("^kembali ke halaman awal  program boothcamp batch melalui menu side bar program boothcamp")
+	public void Programfifteen() {
+		programAdminPage.initpageprogramBoothcampbatch();
+		System.out.println("scenario kembali ke halaman awal  program boothcamp melalui menu side bar program boothcamp passed");
+		extentTest.log(Status.PASS, "kembali ke halaman awal  program boothcamp melalui menu side bar program boothcamp");
+	}
+	@And("^search tabel batch berdasarkan nama lengkap berdasarkan drop down menu")
+	public void Programsixteen() {
+		programAdminPage.searchprogramBoothcampbatch();;
+		System.out.println("scenario search tabel batch berdasarkan nama lengkap berdasarkan drop down menu passed");
+		extentTest.log(Status.PASS, "search tabel batch berdasarkan nama lengkap berdasarkan drop down menu");
+	}
+	@And("^menu pengelompokan data berdasarkan menu untuk fitur search batch")
+	public void Programseventeen() {
+		System.out.println("scenario menu pengelompokan data berdasarkan menu untuk fitur search batch passed");
+		extentTest.log(Status.PASS, "menu pengelompokan data berdasarkan menu untuk fitur search batch");
+	}
+	@And("^Halaman data program batch")
+	public void Programeightteen() {
+		System.out.println("scenario Halaman data program bootcamp passed");
+		extentTest.log(Status.PASS, "Halaman data program bootcamp");
+	}
+	@And("^Halaman awal boothcamp batch ke halaman edit data boothcamp batch")
+	public void Programninthteen() {
+		System.out.println("scenario Halaman awal boothcamp ke halaman edit form data boothcamp passed");
+		extentTest.log(Status.PASS, "Halaman awal boothcamp ke halaman edit form data boothcamp");
+	}
+	@And("^input data perubahan program boothcamp batch dan simpan data")
+	public void Programtwenty() {
+		System.out.println("scenario input data perubahan nama dan status program bootcamp passed");
+		extentTest.log(Status.PASS, "input data perubahan nama dan status program bootcamp");
+	}
+	@And("^kembali ke halaman awal  program boothcamp batch melalui menu side bar program boothcamp batch dari perubahan data")
+	public void Programtwentytwo() {
+		programAdminPage.initpageprogramBoothcampbatch();
+		System.out.println("scenario kembali ke halaman awal  program boothcamp melalui menu side bar program boothcamp passed");
+		extentTest.log(Status.PASS, "kembali ke halaman awal  program boothcamp melalui menu side bar program boothcamp");
+	}
+	@Then("^Berhasil pengecekan menu program batch")
+	public void Programtwentythree() {
+		if (Status.PASS != null) {
+			System.out.println("scenario Berhasil pengecekan menu program passed");
+			extentTest.log(Status.PASS, "Berhasil pengecekan menu program");
+
+		} else {
+			System.out.println("scenario Berhasil pengecekan menu program fail");
+			extentTest.log(Status.FAIL, "Berhasil pengecekan menu program");
+			try {
+				extentTest.fail("Berhasil pengecekan menu program",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+	}
+	
+	//program harga
+	@When("^tabel harga paket program")
+	public void Programtwentyfour() {
+		programAdminPage.programBoothcampPrice();
+		System.out.println("scenario tabel harga paket program passed");
+		extentTest.log(Status.PASS, "tabel harga paket program");
+	}
+	@And("^Dari halaman awal promo harga menuju halaman detail pembayaran")
+	public void Programtwentyfive() {
+		programAdminPage.programpriceitemeselected();
+		System.out.println("scenario Dari halaman awal promo harga menuju halaman detail pembayaran passed");
+		extentTest.log(Status.PASS, "Dari halaman awal promo harga menuju halaman detail pembayaran");
+	}
+	@And("^dari halaman tabel detail pembayaran ke form tambah metode pembayaran detail lalu simpan form")
+	public void Programtwentysix() {
+		programAdminPage.addprogrampriceitemselected();
+		System.out.println("scenario dari halaman tabel detail pembayaran ke form tambah metode pembayaran detail lalu simpan form passed");
+		extentTest.log(Status.PASS, "dari halaman tabel detail pembayaran ke form tambah metode pembayaran detail lalu simpan form");
+	}
+	@And("^Halaman awal detail metode pembayaran ke halaman edit item detail metode deskripsi pembayaran")
+	public void Programtwentyseven() {
+//		programAdminPage.detailDescMetodeBayar();
+		System.out.println("scenario Halaman awal detail metode pembayaran ke halaman edit item detail metode deskripsi pembayaran passed");
+		extentTest.log(Status.PASS, "Halaman awal detail metode pembayaran ke halaman edit item detail metode deskripsi pembayaran");
+	}
+	@And("^input data perubahan detail pembayaran dan simpan data lalu cek tabel detail pembayaran")
+	public void Programtwentyeight() {
+		
+		System.out.println("scenario input data perubahan detail pembayaran dan simpan data lalu cek tabel detail pembayaran passed");
+		extentTest.log(Status.PASS, "input data perubahan detail pembayaran dan simpan data lalu cek tabel detail pembayaran");
+	}
+	@And("^halaman harga paket")
+	public void Programtwentynine() {
+		
+		System.out.println("scenario halaman harga paket passed");
+		extentTest.log(Status.PASS, "halaman harga paket");
+	}
+	@Then("^Berhasil pengecekan menu harga boothcamp")
+	public void Programthirty() {
+		if (Status.PASS != null) {
+			System.out.println("scenario Berhasil pengecekan menu program passed");
+			extentTest.log(Status.PASS, "Berhasil pengecekan menu program");
+
+		} else {
+			System.out.println("scenario Berhasil pengecekan menu program fail");
+			extentTest.log(Status.FAIL, "Berhasil pengecekan menu program");
+			try {
+				extentTest.fail("Berhasil pengecekan menu program",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+	}
+	
+	
 
 //10---------------------------------------------------------------------------------------------------------------------
 	@When("^input data tambah gallery dan simpan data")
 	public void Galleryone() {
+		driver = DriverSingleton.getDriver();
+		driver.get("https://dev.ptdika.com/juaracodingv1/admin/gallery");
 		galleryAdminPage.galleryAdd();
+		galleryAdminPage.initgaleri();
 		System.out.println("scenario input data tambah gallery dan simpan data passed");
 		extentTest.log(Status.PASS, "input data tambah gallery dan simpan data");
 	}
@@ -480,12 +848,19 @@ public class StepDefinition {
 		galleryAdminPage.galleryEdit();
 		System.out.println(
 				"scenario mengetahui detail dari gallery untuk mengambil content detail dari search galeri passed");
-		extentTest.log(Status.PASS,
-				"mengetahui detail dari gallery untuk mengambil content detail dari search galeri");
+		extentTest.log(Status.PASS, "mengetahui detail dari gallery untuk mengambil content detail dari search galeri");
+	}
+
+	@And("^Melakukan pencarian pada gallery")
+	public void Gallerythree() {
+		galleryAdminPage.gallerySearch();
+		System.out.println(
+				"scenario mengetahui detail dari gallery untuk mengambil content detail dari search galeri fail");
+		extentTest.log(Status.FAIL, "mengetahui detail dari gallery untuk mengambil content detail dari search galeri");
 	}
 
 	@Then("^Berhasil pengecekan menu galeri")
-	public void Gallerythree() {
+	public void Galleryfour() {
 		if (Status.PASS != null) {
 			System.out.println("scenario Berhasil pengecekan menu galeri passed");
 			extentTest.log(Status.PASS, "Berhasil pengecekan menu galeri");
@@ -494,7 +869,8 @@ public class StepDefinition {
 			System.out.println("scenario Berhasil pengecekan menu galeri fail");
 			extentTest.log(Status.FAIL, "Berhasil pengecekan menu galeri");
 			try {
-				extentTest.fail( "Berhasil pengecekan menu galeri", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("Berhasil pengecekan menu galeri",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -528,7 +904,8 @@ public class StepDefinition {
 			System.out.println("scenario Berhasil pengecekan menu setting fail");
 			extentTest.log(Status.FAIL, "Berhasil pengecekan menu setting");
 			try {
-				extentTest.fail( "Berhasil pengecekan menu setting", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("Berhasil pengecekan menu setting",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -544,7 +921,7 @@ public class StepDefinition {
 	// Menu Home
 	@Given("^User masuk halaman Web Juara Coding")
 	public void homePage() {
-		
+
 		driver = DriverSingleton.getDriver();
 		driver.get(ConstantsDriver.URL_USER);
 		dashboard.logoutDashboardPeserta();
@@ -555,7 +932,7 @@ public class StepDefinition {
 	@Then("^User masukkan email dan tekan subscribe")
 	public void User_masukkan_email_dan_tekan_subscribe() {
 		dashboard.sendEmailandSubscribe(configurationProperties.getEmail_user());
-		
+
 		if (Status.PASS != null) {
 			System.out.println("scenario User masukkan email dan tekan subscribe passed");
 			extentTest.log(Status.PASS, "User masukkan email dan tekan subscribe");
@@ -564,7 +941,8 @@ public class StepDefinition {
 			System.out.println("scenario User masukkan email dan tekan subscribe fail");
 			extentTest.log(Status.FAIL, "User masukkan email dan tekan subscribe");
 			try {
-				extentTest.fail( "User masukkan email dan tekan subscribe", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("User masukkan email dan tekan subscribe",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -585,8 +963,7 @@ public class StepDefinition {
 	public void User_pindah_ke_halaman_Bootcamp() {
 		driver = DriverSingleton.getDriver();
 		driver.get("https://dev.ptdika.com/juaracodingv1/bootcamp");
-//			bootcamp.pageBootcamp();
-		
+
 		if (Status.PASS != null) {
 			System.out.println("scenario User pindah ke halaman Bootcamp passed");
 			extentTest.log(Status.PASS, "User pindah ke halaman Bootcamp");
@@ -595,7 +972,8 @@ public class StepDefinition {
 			System.out.println("scenario User pindah ke halaman Bootcamp fail");
 			extentTest.log(Status.FAIL, "User pindah ke halaman Bootcamp");
 			try {
-				extentTest.fail( "User pindah ke halaman Bootcamp", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("User pindah ke halaman Bootcamp",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -628,7 +1006,7 @@ public class StepDefinition {
 	@Then("^User click profile tab Qualfication")
 	public void User_click_profile_tab_Qualfication() {
 		syllabus.ProfileTabQualification();
-		
+
 		if (Status.PASS != null) {
 			System.out.println("scenario User click profile tab Qualfication passed");
 			extentTest.log(Status.PASS, "User click profile tab Qualfication");
@@ -637,7 +1015,8 @@ public class StepDefinition {
 			System.out.println("scenario User click profile tab Qualfication fail");
 			extentTest.log(Status.FAIL, "User click profile tab Qualfication");
 			try {
-				extentTest.fail( "User click profile tab Qualfication", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("User click profile tab Qualfication",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -683,7 +1062,8 @@ public class StepDefinition {
 			System.out.println("scenario User click Search fail");
 			extentTest.log(Status.FAIL, "User click Search");
 			try {
-				extentTest.fail( "User click Search", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("User click Search",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -696,7 +1076,7 @@ public class StepDefinition {
 	@Then("^User pindah ke halaman About")
 	public void User_pindah_ke_halaman_About() {
 		about.clickAbout();
-		
+
 		if (Status.PASS != null) {
 			System.out.println("scenario User click profile tab Qualfication passed");
 			extentTest.log(Status.PASS, "User pindah ke halaman About");
@@ -705,7 +1085,8 @@ public class StepDefinition {
 			System.out.println("scenario User pindah ke halaman About fail");
 			extentTest.log(Status.FAIL, "User pindah ke halaman About");
 			try {
-				extentTest.fail( "User pindah ke halaman About", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("User pindah ke halaman About",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -730,7 +1111,7 @@ public class StepDefinition {
 	@Then("^User click Detail Blog")
 	public void User_click_Detail_Blog() {
 		blog.chooseBlog();
-		
+
 		if (Status.PASS != null) {
 			System.out.println("scenario User click Detail Blog passed");
 			extentTest.log(Status.PASS, "User click Detail Blog");
@@ -739,7 +1120,8 @@ public class StepDefinition {
 			System.out.println("scenario User click Detail Blog fail");
 			extentTest.log(Status.FAIL, "User click Detail Blog");
 			try {
-				extentTest.fail( "User click Detail Blog", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("User click Detail Blog",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -765,8 +1147,7 @@ public class StepDefinition {
 	@Then("^User click Send Message")
 	public void User_click_Send_Message() {
 		contact.sendMessage();
-		
-		
+
 		if (Status.PASS != null) {
 			System.out.println("scenario User click Send Message passed");
 			extentTest.log(Status.PASS, "User click Send Message");
@@ -775,7 +1156,8 @@ public class StepDefinition {
 			System.out.println("scenario User click Send Message fail");
 			extentTest.log(Status.FAIL, "User click Send Message");
 			try {
-				extentTest.fail( "User click Send Message", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("User click Send Message",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -788,8 +1170,7 @@ public class StepDefinition {
 	@When("^User masuk halaman registrasi")
 	public void User_masuk_halaman_registrasi() {
 		regist.registerPage();
-		
-		
+
 		if (Status.PASS != null) {
 			System.out.println("scenario User masuk halaman registrasi passed");
 			extentTest.log(Status.PASS, "User masuk halaman registrasi");
@@ -798,7 +1179,8 @@ public class StepDefinition {
 			System.out.println("scenario User masuk halaman registrasi fail");
 			extentTest.log(Status.FAIL, "User masuk halaman registrasi");
 			try {
-				extentTest.fail( "User masuk halaman registrasi", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+				extentTest.fail("User masuk halaman registrasi",
+						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -814,21 +1196,21 @@ public class StepDefinition {
 				configurationProperties.getCity_user(), configurationProperties.getPostCode_user(), configurationProperties.getMobilePhone_user(),
 				configurationProperties.getRelativesPhone_user(), configurationProperties.getMotivation_user());
 		extentTest.log(Status.PASS, "User input formulir");
-		
+
 	}
 
 	@Then("^User kirim formulir")
 	public void User_kirim_formulir() {
 		regist.clickSend();
-		extentTest.log( Status.PASS,"User kirim formulir");
+		extentTest.log(Status.PASS, "User kirim formulir");
 		try {
-			extentTest.fail( "User kirim formulir", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
+			extentTest.fail("User kirim formulir",
+					MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-
 
 //AKHIR TESTSTING USER WEB JCODING-------------------------------------------------------------------------------------------------------------------
 
@@ -838,29 +1220,27 @@ public class StepDefinition {
 	public void closeObject() {
 		extentReports.flush();
 	}
-	
 
 //CAPTURE PHOTO TESTING
-	
+
 	public static String captureScreen() throws IOException {
 		TakesScreenshot screen = (TakesScreenshot) driver;
 		File src = screen.getScreenshotAs(OutputType.FILE);
-		String dest ="D:\\ChromeDriver\\SS ERROR TESTING\\"
-		+getcurrentdateandtime()+".png";
+		String dest = "D:\\ChromeDriver\\SS ERROR TESTING\\" + getcurrentdateandtime() + ".png";
 		File target = new File(dest);
 		FileUtils.copyFile(src, target);
 		return dest;
-		}
-	
-	public static String getcurrentdateandtime(){
+	}
+
+	public static String getcurrentdateandtime() {
 		String str = null;
-		try{
+		try {
 			DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss:SSS");
 			Date date = new Date();
-			str= dateFormat.format(date);
+			str = dateFormat.format(date);
 			str = str.replace(" ", "-").replaceAll("/", "").replaceAll(":", "");
-		} catch (Exception e){
-			e.printStackTrace(); 
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		return str;
 	}

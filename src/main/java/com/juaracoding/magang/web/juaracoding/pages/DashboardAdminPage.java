@@ -123,25 +123,11 @@ public class DashboardAdminPage {
 		return whatnew;
 	}
 
-	public void checkSidebarElement() {
+	public void home() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		Actions actions = new Actions(driver);
 		WebDriverWait wait = new WebDriverWait(driver, 50);
-
-		// toogle
-		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
-		menu_toogleeBar.click();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
-		menu_toogleeBar.click();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
-		menu_toogleeBar.click();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
-		menu_toogleeBar.click();
-		// galeri
-		wait.until(ExpectedConditions.elementToBeClickable(menu_Gallery));
-		menu_Gallery.click();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
-		menu_dashboard.click();
+		toogle();
 		// HOME JC
 		wait.until(ExpectedConditions.elementToBeClickable(menu_HomeJc));
 		menu_HomeJc.click();
@@ -149,8 +135,14 @@ public class DashboardAdminPage {
 		menu_HomeTestimonial.click();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
 		menu_dashboard.click();
+	}
+
+	public void learning() {
 		// LEARNING JC
-		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+
 		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
 		menu_dashboard.click();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_LearningJc));
@@ -177,25 +169,37 @@ public class DashboardAdminPage {
 		menu_LearningSyllabus.click();// ini ngaco cuk malah ke halaman awal
 		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
 		menu_dashboard.click();
-		
+	}
+
+	public void blog() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+
 		// BLOG JC
 		wait.until(ExpectedConditions.elementToBeClickable(menu_Blog));
 		menu_Blog.click();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
 		menu_dashboard.click();
-		
+	}
+
+	public void contactmasg() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+
 		// Contact Massage
 		wait.until(ExpectedConditions.elementToBeClickable(menu_CtcMassage));
 		menu_CtcMassage.click();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
 		menu_dashboard.click();
-		
-		// Transaction
-		wait.until(ExpectedConditions.elementToBeClickable(menu_Transaction));
-		menu_Transaction.click();
-		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
-		menu_dashboard.click();
-	
+
+	}
+
+	public void user() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
 		// USER
 		wait.until(ExpectedConditions.elementToBeClickable(menu_User));
 		actions.moveToElement(menu_User).perform();
@@ -215,7 +219,7 @@ public class DashboardAdminPage {
 		wait.until(ExpectedConditions.elementToBeClickable(menu_UserComplete));
 		actions.moveToElement(menu_UserComplete).perform();
 		menu_UserComplete.click();
-		
+
 		js.executeScript("arguments[0].scrollIntoView();", menu_User);
 		wait.until(ExpectedConditions.elementToBeClickable(menu_User));
 		actions.moveToElement(menu_User).perform();
@@ -240,7 +244,23 @@ public class DashboardAdminPage {
 		wait.until(ExpectedConditions.elementToBeClickable(menu_UserAccesEmployee));
 		actions.moveToElement(menu_UserAccesEmployee).perform();
 		menu_UserAccesEmployee.click();
+	}
 
+	public void transaction() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		// Transaction
+		wait.until(ExpectedConditions.elementToBeClickable(menu_Transaction));
+		menu_Transaction.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
+		menu_dashboard.click();
+	}
+
+	public void program() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
 //		//PROGRAM
 		wait.until(ExpectedConditions.elementToBeClickable(menu_program));
 		actions.moveToElement(menu_program).perform();
@@ -258,12 +278,25 @@ public class DashboardAdminPage {
 		wait.until(ExpectedConditions.elementToBeClickable(menu_programboothcampharga));
 		actions.moveToElement(menu_programboothcampharga).perform();
 		menu_programboothcampharga.click();
-		
+	}
+
+	public void galeri() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+
 //		//GALERI
 		js.executeScript("window.scrollBy(0,50)");
 		wait.until(ExpectedConditions.elementToBeClickable(menu_Gallery));
 		actions.moveToElement(menu_Gallery).perform();
 		menu_Gallery.click();
+	}
+
+	public void setting() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+
 		// Setting
 		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
 		actions.moveToElement(menu_toogleeBar).perform();
@@ -274,11 +307,29 @@ public class DashboardAdminPage {
 		wait.until(ExpectedConditions.elementToBeClickable(menu_Settingtemplateemail));
 		actions.moveToElement(menu_Settingtemplateemail).perform();
 		menu_Settingtemplateemail.click();
-
 		// balik ke dashboard karna udah cek semua menu nya
 		wait.until(ExpectedConditions.elementToBeClickable(menu_dashboard));
 		actions.moveToElement(menu_dashboard).perform();
 		menu_dashboard.click();
+	}
+
+	public void checkSidebarElement() {
+
+	}
+
+	private void toogle() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Actions actions = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		// toogle
+		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
+		menu_toogleeBar.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
+		menu_toogleeBar.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
+		menu_toogleeBar.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
+		menu_toogleeBar.click();
 
 	}
 }

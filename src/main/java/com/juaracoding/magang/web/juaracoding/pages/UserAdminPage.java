@@ -109,14 +109,17 @@ public class UserAdminPage {
 		wait.until(ExpectedConditions.elementToBeClickable(menu_UserBilling));
 		menu_UserBilling.click();
 		wait.until(ExpectedConditions.elementToBeClickable(userbillingitemselected));
-		userbillingitemselected.click();
+//		userbillingitemselected.click();
 //		lssortirStatusbilling(1);
 //		lssortirStatusbilling(2);
-		wait.until(ExpectedConditions.elementToBeClickable(userbillingUpfront));
-		userbillingUpfront.click();
-		wait.until(ExpectedConditions.elementToBeClickable(userbillingUpfrontDetailPayperStudent));
-		userbillingUpfrontDetailPayperStudent.click();
-		// isa
+//		wait.until(ExpectedConditions.elementToBeClickable(userbillingUpfront));
+//		userbillingUpfront.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(userbillingUpfrontDetailPayperStudent));
+//		userbillingUpfrontDetailPayperStudent.click();
+		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
+		menu_toogleeBar.click();
+		
+
 
 	}
 
