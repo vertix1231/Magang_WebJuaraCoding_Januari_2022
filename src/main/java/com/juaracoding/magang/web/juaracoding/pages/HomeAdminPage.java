@@ -110,10 +110,10 @@ public class HomeAdminPage {
 		
 		wait.until(ExpectedConditions.elementToBeClickable(cardone));
 		cardone.click();
-		uploadagainEditBtn.sendKeys("D:/ChromeDriver/eren.jpg");
-		editnama.sendKeys("irsyad12345");
+		uploadagainEditBtn.sendKeys("D:/ChromeDriver/ibnu.jpg");
+		editnama.sendKeys("ibnu-kemal");
 		lsPublish(1);
-		editTestiMain.sendKeys("irsyad12345 cocococococobabababab aja isi testi heheheh");
+		editTestiMain.sendKeys("ibnu kemal cobain blog juara coding");
 		lsRating(4);
 		submitedittestiBtn.click();
 
@@ -141,11 +141,11 @@ public class HomeAdminPage {
 		Actions actions = new Actions(driver);
 		WebDriverWait wait = new WebDriverWait(driver, 50);
 		
-		inputnametesti.sendKeys("irsyad1");
+		inputnametesti.sendKeys("Ibnu Kemal");
 //		uploadTestPhotoBtn.click();
-		uploadTestPhotoBtn.sendKeys("D:/ChromeDriver/34168.jpg");
+		uploadTestPhotoBtn.sendKeys("D:/ChromeDriver/ibnu2.jpg");
 		lsPublish(0);
-		inputMainTesti.sendKeys("cocococococobabababab aja isi testi heheheh");
+		inputMainTesti.sendKeys("testimonial isi");
 		lsRating(5);
 		wait.until(ExpectedConditions.elementToBeClickable(submitedittestiBtn));
 		submittestbtn.click();

@@ -27,6 +27,7 @@ import com.juaracoding.magang.web.juaracoding.pages.AboutPage;
 import com.juaracoding.magang.web.juaracoding.pages.BlogAdminPage;
 import com.juaracoding.magang.web.juaracoding.pages.BlogPage;
 import com.juaracoding.magang.web.juaracoding.pages.BootcampPage;
+import com.juaracoding.magang.web.juaracoding.pages.BucketPage;
 import com.juaracoding.magang.web.juaracoding.pages.ContactMassageAdminPage;
 import com.juaracoding.magang.web.juaracoding.pages.ContactPage;
 import com.juaracoding.magang.web.juaracoding.pages.CoursePage;
@@ -79,6 +80,7 @@ public class StepDefinition {
 	private BlogPage blog;
 	private ContactPage contact;
 	private RegisterPage regist;
+	private BucketPage bucket;
 	private ExtentTest extentTest;
 	static ExtentReports extentReports = new ExtentReports();
 	static ExtentSparkReporter htmlreporter = new ExtentSparkReporter(
@@ -113,7 +115,7 @@ public class StepDefinition {
 		blog = new BlogPage();
 		contact = new ContactPage();
 		regist = new RegisterPage();
-//		bucket = new BucketPage();
+		bucket = new BucketPage();
 		TestCase[] tests = TestCase.values();
 		extentTest = extentReports.createTest(tests[Utils.testcount].getTestNama());
 		Log.getLogData(Log.class.getName()); // log4j
@@ -1210,6 +1212,26 @@ public class StepDefinition {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	//Bucket Page
+	
+	@When("^User klik Bayar")
+	public void User_klik_Bayar() {
+		bucket.clickPay();
+		extentTest.log(Status.PASS, "User klik Bayar");
+	}
+	
+	@And("^User melakukan transaksi")
+	public void User_melakukan_transaksi() {
+		bucket.boxPayment();
+		extentTest.log(Status.PASS, "User melakukan transaksi");
+	}
+	
+	@Then("^User ke halaman Invoice")
+	public void User_ke_halaman_Invoice() {
+		bucket.goToInvoice();
+		extentTest.log(Status.PASS, "User ke halaman Invoice");
 	}
 
 //AKHIR TESTSTING USER WEB JCODING-------------------------------------------------------------------------------------------------------------------

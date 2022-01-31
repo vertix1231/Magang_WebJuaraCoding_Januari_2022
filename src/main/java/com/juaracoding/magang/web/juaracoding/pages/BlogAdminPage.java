@@ -92,8 +92,8 @@ public class BlogAdminPage {
 		menu_Blog.click();
 		wait.until(ExpectedConditions.elementToBeClickable(addBlogbtn));
 		addBlogbtn.click();
-		uploadBlogBtn.sendKeys("D:/ChromeDriver/eren.jpg");
-		blogtitile.sendKeys("blog coba coba aja80-72");
+		uploadBlogBtn.sendKeys("D:/ChromeDriver/ibnu2.jpg");
+		blogtitile.sendKeys("testing blog 02");
 //		lsPublishblog(1);
 //		lsSetHomehblog(1);
 		blogcontentpreview.sendKeys("blog bagi orang yang ingin coba coba");
@@ -116,7 +116,7 @@ public class BlogAdminPage {
 		blogSelectitem.click();
 		wait.until(ExpectedConditions.elementToBeClickable(uploadeditBlogImgt));
 		actions.moveToElement(uploadeditBlogImgt).perform();
-		uploadeditBlogImgt.sendKeys("D:/ChromeDriver/ac2.png");
+		uploadeditBlogImgt.sendKeys("D:/ChromeDriver/ibnu.jpg");
 		
 //		lsPublishblog(1);
 //		lsSetHomehblog(1);

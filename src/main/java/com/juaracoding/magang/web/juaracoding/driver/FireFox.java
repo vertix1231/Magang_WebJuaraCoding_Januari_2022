@@ -8,8 +8,7 @@ public class FireFox implements DriverStrategy {
 
 	public WebDriver setStrategy() {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver",
-				"D:/ChromeDriver/chromedriver.exe");
+		System.setProperty("webdriver.geckodriver.driver", "D:/firefox/geckodriver.exe");
 		WebDriver driver = new ChromeDriver();
 		return driver;
 	}

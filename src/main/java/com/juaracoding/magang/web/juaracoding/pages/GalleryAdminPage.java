@@ -62,10 +62,10 @@ public class GalleryAdminPage {
 		btnaddgaleri.click();
 		wait.until(ExpectedConditions.elementToBeClickable(judulgambar));
 		actions.moveToElement(judulgambar).perform();
-		judulgambar.sendKeys("penguin linux 0-9 :)");
+		judulgambar.sendKeys("Halo Juara Coding 03");
 		wait.until(ExpectedConditions.elementToBeClickable(gambarselected));
 		actions.moveToElement(gambarselected).perform();
-		gambarselected.sendKeys("D:\\ChromeDriver\\penguinlinux.png");
+		gambarselected.sendKeys("D:\\ChromeDriver\\ibnu.jpg");
 		wait.until(ExpectedConditions.elementToBeClickable(btnsaveGambar));
 		actions.moveToElement(btnsaveGambar).perform();
 		btnsaveGambar.click();

@@ -19,8 +19,8 @@ public enum TestCase {
 	T16("Testing About Page"),
 	T17("Testing Blog Page"),
 	T18("Testing Contact Page"),
-	T19("Testing Register Page");
-	
+	T19("Testing Register Page"),
+	T20("Testing Bucket Page");
 	
 	private String TestNama;
 
