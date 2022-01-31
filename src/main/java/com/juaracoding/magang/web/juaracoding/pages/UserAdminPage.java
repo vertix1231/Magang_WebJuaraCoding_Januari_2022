@@ -76,9 +76,9 @@ public class UserAdminPage {
 	// user subs
 	@FindBy(css = "#pageWrapper > div.page-body-wrapper > div.page-body > div > div:nth-child(2) > div > div > div > div.card-header > a")
 	private WebElement btnsendemailsubs;
-	@FindBy(css = "#frmregister > div.card-body > div > div.col-md-6.col-md-12 > div > select")
+	@FindBy(xpath = "/html/body/div[2]/div[2]/div[2]/div[2]/div/div/div/form/div[2]/div/div[1]/div/select/option[2]")
 	private WebElement listTosendSubs;
-	@FindBy(css = "#exampleFormControlSelect9")
+	@FindBy(xpath = "/html/body/div[2]/div[2]/div[2]/div[2]/div/div/div/form/div[2]/div/div[2]/div/select/option[7]")
 	private WebElement listTemplateSubs;
 	@FindBy(css = "#frmregister > div.card-footer.text-end > input")
 	private WebElement btnsaveEmailSendSubs;
@@ -251,8 +251,8 @@ public class UserAdminPage {
 		
 		wait.until(ExpectedConditions.elementToBeClickable(btnsendemailsubs));
 		btnsendemailsubs.click();
-//		lstoSendSubs(1);
-//		lstemplatesubs(1);
+		lstoSendSubs(1);
+		lstemplatesubs(1);
 		wait.until(ExpectedConditions.elementToBeClickable(btnsaveEmailSendSubs));
 		btnsaveEmailSendSubs.click();
 
