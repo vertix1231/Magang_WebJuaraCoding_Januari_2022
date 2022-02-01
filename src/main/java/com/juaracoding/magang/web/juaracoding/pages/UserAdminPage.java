@@ -247,7 +247,7 @@ public class UserAdminPage {
 	private void sendEmailSubs() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		Actions actions = new Actions(driver);
-		WebDriverWait wait = new WebDriverWait(driver, 50);
+		WebDriverWait wait = new WebDriverWait(driver, 600);
 		
 		wait.until(ExpectedConditions.elementToBeClickable(btnsendemailsubs));
 		btnsendemailsubs.click();
@@ -255,7 +255,8 @@ public class UserAdminPage {
 		lstemplatesubs(1);
 		wait.until(ExpectedConditions.elementToBeClickable(btnsaveEmailSendSubs));
 		btnsaveEmailSendSubs.click();
-
+		
+//		Thread.sleep();
 	}
 
 	private void lstoSendSubs(int selection) {
@@ -305,7 +306,7 @@ public class UserAdminPage {
 	public void Useraccess() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		Actions actions = new Actions(driver);
-		WebDriverWait wait = new WebDriverWait(driver, 50);
+		WebDriverWait wait = new WebDriverWait(driver, 600);
 		
 		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
 		menu_toogleeBar.click();

@@ -1,6 +1,7 @@
 package com.juaracoding.magang.web.juaracoding.pages;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -62,10 +63,10 @@ public class GalleryAdminPage {
 		btnaddgaleri.click();
 		wait.until(ExpectedConditions.elementToBeClickable(judulgambar));
 		actions.moveToElement(judulgambar).perform();
-		judulgambar.sendKeys("Halo Juara Coding 03");
+		judulgambar.sendKeys("Halo Juara Coding 22");
 		wait.until(ExpectedConditions.elementToBeClickable(gambarselected));
 		actions.moveToElement(gambarselected).perform();
-		gambarselected.sendKeys("D:\\ChromeDriver\\ibnu.jpg");
+		gambarselected.sendKeys("D:\\ChromeDriver\\penguinlinux.png");
 		wait.until(ExpectedConditions.elementToBeClickable(btnsaveGambar));
 		actions.moveToElement(btnsaveGambar).perform();
 		btnsaveGambar.click();
@@ -111,6 +112,7 @@ public class GalleryAdminPage {
 		wait.until(ExpectedConditions.elementToBeClickable(search_gallery));
 		actions.moveToElement(search_gallery).perform();
 		search_gallery.sendKeys("mobil");
+		search_gallery.sendKeys(Keys.ENTER);
 
 //		js.executeScript("window.scrollBy(0,50)");
 //		wait.until(ExpectedConditions.elementToBeClickable(menu_Gallery));

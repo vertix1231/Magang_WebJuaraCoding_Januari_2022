@@ -482,7 +482,7 @@ public class StepDefinition {
 				extentTest.fail("Berhasil pengecekan menu Contact Massage",
 						MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+		
 				e.printStackTrace();
 			}
 		}
@@ -519,7 +519,7 @@ public class StepDefinition {
 
 	@And("^Approve transaction ke user billing")
 	public void Transactionfour() {
-		transactionAdminPage.detailTransationForVerification();
+ 		transactionAdminPage.detailTransationForVerification();
 		System.out.println("scenario Approve transaction ke user billing passed");
 		extentTest.log(Status.PASS, "Approve transaction ke user billing");
 

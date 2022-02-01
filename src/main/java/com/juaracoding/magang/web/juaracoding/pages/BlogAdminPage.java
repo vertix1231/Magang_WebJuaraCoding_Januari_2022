@@ -92,8 +92,8 @@ public class BlogAdminPage {
 		menu_Blog.click();
 		wait.until(ExpectedConditions.elementToBeClickable(addBlogbtn));
 		addBlogbtn.click();
-		uploadBlogBtn.sendKeys("D:/ChromeDriver/ibnu2.jpg");
-		blogtitile.sendKeys("testing blog 02");
+		uploadBlogBtn.sendKeys("D:/ChromeDriver/ac2.png");
+		blogtitile.sendKeys("testing blog 21");
 //		lsPublishblog(1);
 //		lsSetHomehblog(1);
 		blogcontentpreview.sendKeys("blog bagi orang yang ingin coba coba");

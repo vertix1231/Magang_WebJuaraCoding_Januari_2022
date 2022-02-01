@@ -39,6 +39,7 @@ public class SettingAdminPage {
 		Actions actions = new Actions(driver);
 		WebDriverWait wait = new WebDriverWait(driver, 50);
 
+		//HALAMAN AWAL SETTING
 		actions.dragAndDrop(listgalery_text, menusidebar_container).build().perform();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_toogleeBar));
 		menu_toogleeBar.click();
@@ -48,6 +49,8 @@ public class SettingAdminPage {
 		actions.moveToElement(menu_Settingtemplateemail).perform();
 		wait.until(ExpectedConditions.elementToBeClickable(menu_Settingtemplateemail));
 		menu_Settingtemplateemail.click();
+		
+		//ADD TEMPALTE EMAIL
 
 	}
 	public void settingEditTempalte() {
