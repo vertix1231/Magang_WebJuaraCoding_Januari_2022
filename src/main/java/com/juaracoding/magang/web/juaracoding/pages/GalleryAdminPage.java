@@ -63,14 +63,14 @@ public class GalleryAdminPage {
 		btnaddgaleri.click();
 		wait.until(ExpectedConditions.elementToBeClickable(judulgambar));
 		actions.moveToElement(judulgambar).perform();
-		judulgambar.sendKeys("Halo Juara Coding 22");
+		judulgambar.sendKeys("Halo Juara Coding 24");
 		wait.until(ExpectedConditions.elementToBeClickable(gambarselected));
 		actions.moveToElement(gambarselected).perform();
 		gambarselected.sendKeys("D:\\ChromeDriver\\penguinlinux.png");
 		wait.until(ExpectedConditions.elementToBeClickable(btnsaveGambar));
 		actions.moveToElement(btnsaveGambar).perform();
 		btnsaveGambar.click();
-
+		
 	}
 	public void initgaleri() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;

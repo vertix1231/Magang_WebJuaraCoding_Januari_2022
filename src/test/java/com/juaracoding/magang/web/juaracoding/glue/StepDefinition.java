@@ -1224,13 +1224,13 @@ public class StepDefinition {
 	
 	@And("^User melakukan transaksi")
 	public void User_melakukan_transaksi() {
-		bucket.boxPayment();
+//		bucket.boxPayment();
 		extentTest.log(Status.PASS, "User melakukan transaksi");
 	}
 	
 	@Then("^User ke halaman Invoice")
 	public void User_ke_halaman_Invoice() {
-		bucket.goToInvoice();
+//		bucket.goToInvoice();
 		extentTest.log(Status.PASS, "User ke halaman Invoice");
 	}
 

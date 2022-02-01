@@ -93,7 +93,7 @@ public class BlogAdminPage {
 		wait.until(ExpectedConditions.elementToBeClickable(addBlogbtn));
 		addBlogbtn.click();
 		uploadBlogBtn.sendKeys("D:/ChromeDriver/ac2.png");
-		blogtitile.sendKeys("testing blog 21");
+		blogtitile.sendKeys("testing blog 24");
 //		lsPublishblog(1);
 //		lsSetHomehblog(1);
 		blogcontentpreview.sendKeys("blog bagi orang yang ingin coba coba");

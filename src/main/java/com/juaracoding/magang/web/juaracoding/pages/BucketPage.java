@@ -38,14 +38,14 @@ public class BucketPage {
 		btnPay.click();
 	}
 	
-	public void boxPayment() {
-		btnContinue.click();
-		lstPaymentMethod.click();
-		klikBCA.click();
-		checkAccNumb.click();
-	}
+//	public void boxPayment() {
+//		btnContinue.click();
+//		lstPaymentMethod.click();
+//		klikBCA.click();
+//		checkAccNumb.click();
+//	}
 	
-	public void goToInvoice() {
-		btnComplete.click();
-	}
+//	public void goToInvoice() {
+//		btnComplete.click();
+//	}
 }
